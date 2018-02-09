@@ -18,12 +18,13 @@ body, html {
 */
 .mason-carousel {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     list-style: none;
     overflow: hidden;
     white-space: nowrap;
-    width: 100%;
+    width: auto;
     height: 100%;
     min-height: 10em;
 }
@@ -171,5 +172,5 @@ a:link{
  * Page specific identifier styles (do not use class selectors)
  */
 #about-carousel {
-    height: 20em;
+    height: 40em;
 }
