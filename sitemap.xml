@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url> 
+    <loc>http://www.sammasonmusic.com/</loc> 
+    <image:image>
+       <image:loc>http://www.sammasonmusic.com/images/IMG_Sam_Mason_1049.jpg</image:loc>
+       <image:caption>Sam Mason singer/songwriter from Fort Worth, Tx artist photo background image.</image:caption>
+    </image:image>
+  </url>
+  <url> 
+    <loc>http://www.sammasonmusic.com/#about</loc> 
+    <image:image>
+       <image:loc>http://www.sammasonmusic.com/images/compressed/IMG_Sam_Mason_singer_songwriter_0122.jpg</image:loc>
+       <image:caption>Sam Mason singer/songwriter from Fort Worth, Tx artist photo.</image:caption>
+    </image:image>
+  </url>
+    <url>
+    <loc>http://www.sammasonmusic.com/#music</loc> 
+    </url>
+    <url>
+    <loc>http://www.sammasonmusic.com/#photos</loc> 
+        <image:image>
+            <image:loc>http://www.sammasonmusic.com/images/compressed/IMG_Sam_Mason_singer_songwriter_0123.jpg</image:loc>
+            <image:caption>Sam Mason singer/songwriter from Fort Worth, Tx artist photo 1.</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>http://www.sammasonmusic.com/images/compressed/IMG_Sam_Mason_singer_songwriter_0124.jpg</image:loc>
+            <image:caption>Sam Mason singer/songwriter from Fort Worth, Tx artist photo 2.</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>http://www.sammasonmusic.com/images/compressed/IMG_Sam_Mason_singer_songwriter_0125.jpg</image:loc>
+            <image:caption>Sam Mason singer/songwriter from Fort Worth, Tx artist photo 3.</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>http://www.sammasonmusic.com/images/compressed/IMG_Sam_Mason_singer_songwriter_0126.jpg</image:loc>
+            <image:caption>Sam Mason singer/songwriter from Fort Worth, Tx artist photo 4.</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>http://www.sammasonmusic.com/images/compressed/IMG_Sam_Mason_singer_songwriter_0127.jpg</image:loc>
+            <image:caption>Sam Mason singer/songwriter from Fort Worth, Tx artist photo 5.</image:caption>
+        </image:image>
+    </url>
+    <url>
+    <loc>http://www.sammasonmusic.com/#press</loc> 
+    </url>
+    <url>
+    <loc>http://www.sammasonmusic.com/#contact</loc> 
+    </url>
+</urlset>
