@@ -7,18 +7,35 @@ body, html {
     background-size: cover;
     */
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: 	rgb(120,120,120);
+    background-color: white;
     color: white;
     height: 100%;
     margin: 0;
     overflow: scroll;
-}
-
-.background-image {
+    /*
     background-image: url('../../images/sam-mason-homepage.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    */
+}
+
+.about-background-img {
+    background-image: url('../../images/IMG_Sammy_BW4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background-image {
+    background-image: url('../../images/IMG_Sammy_BW5.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mason-section__content__width {
+    width: 50%;
 }
 
 p {
@@ -29,6 +46,15 @@ p {
 li {
     list-style: none;
 }
+
+.mason-section--alternate__background {
+    background-color: #202040;
+}
+
+.mason-section__faded {
+    opacity: 0.8;
+}
+
 /*
 * Organisms: carousel
 */
@@ -69,7 +95,7 @@ header {
     border-bottom: 1px;
     border-bottom-style: solid;
     border-bottom-color: rgba(255, 255, 255, 0.2);
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     height: 3.4375em;
 }
 
@@ -114,7 +140,6 @@ a:link{
 /*
 * Section: Press
 */
-
 .mason-section {
     /*background-color: rgb(65, 63, 63);*/
     display: flex;
@@ -132,8 +157,13 @@ a:link{
     font-size: 2.4em;
     opacity: 0.8;
     color: white;
-    text-decoration-line: underline;
     text-transform: capitalize;
+}
+
+.mason-section__header h1 {
+    border-bottom: 1px solid white;
+    padding-bottom: 3px;
+    letter-spacing: 0.2em;
 }
 
 .mason-section__content {
@@ -145,6 +175,17 @@ a:link{
     text-align: center;
     margin: 0em 5em;
     line-height: 1.7em;
+    margin-bottom: 2em;
+}
+
+.mason-section__content__storyright {
+    position: relative;
+    left: 38.7%;
+}
+
+.mason-section__header_left {
+    position: relative;
+    right: 38.7%;
 }
 
 /* Elements: BEM */
@@ -152,6 +193,7 @@ a:link{
     display: flex;
     flex-direction: column;
     padding: 0em 2em;
+    background-color: #202040;
 }
 
 .mason-section__header_image img{
@@ -182,10 +224,57 @@ a:link{
     text-transform: none !important;
 }
 
+/*
+* footer
+*/
+
+.mason-footer {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 0;
+    background-color: gray;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.mason-footer--iphone7 {
+    max-width: 375px;
+}
+
+/**
+ * Typography
+ */
+ .mason-typography--fineprint {
+     font-size: 0.7em;
+ }
+
+/**
+ * Social
+ */
+ .mason-social {
+    line-height: 2em;
+ }
+
+ .mason-social li {
+    display: inline;
+    padding-right: 0.9em;
+    white-space: nowrap;
+}
+
+.mason-social__icon {
+    padding-right: 0.4em;
+}
+
 
 /**
  * Page specific identifier styles (do not use class selectors)
  */
 #about-carousel {
     height: 40em;
+}
+
+.testing-width-delete-soon {
+    color: dodgerblue;
 }
