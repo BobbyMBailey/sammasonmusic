@@ -1,23 +1,11 @@
 @import url(font-awesome.min.css);
 body, html {
-    /*
-    background-image: url('../../images/IMG_Sam_Mason_1049.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    */
     font-family: 'Source Sans Pro', sans-serif;
     background-color: white;
     color: white;
     height: 100%;
     margin: 0;
     overflow: scroll;
-    /*
-    background-image: url('../../images/sam-mason-homepage.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    */
 }
 
 .about-background-img {
@@ -275,6 +263,6 @@ a:link{
     height: 40em;
 }
 
-.testing-width-delete-soon {
+.demo-separator {
     color: dodgerblue;
 }
