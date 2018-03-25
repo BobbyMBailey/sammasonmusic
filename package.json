@@ -7,7 +7,7 @@
   "author": "Robert Bailey",
   "license": "MIT",
   "scripts": {
-    "test": "lint",
+    "test": "yarn lint",
     "lint": "stylelint assets/css/mason.css"
   },
   "devDependencies": {
