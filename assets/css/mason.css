@@ -79,7 +79,7 @@ li {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     border-bottom: 1px;
     border-bottom-style: solid;
     border-bottom-color: rgba(255, 255, 255, 0.2);
@@ -92,6 +92,7 @@ header {
 header h2 {
     padding-left: 0.8em;
     font-weight: 200;
+    white-space: nowrap;
 }
 
 .mason-nav {
