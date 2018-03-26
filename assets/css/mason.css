@@ -10,24 +10,6 @@ html {
   overflow: scroll;
 }
 
-.about-background-img {
-  background-image: url('../../images/IMG_Sammy_BW4.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.background-image {
-  background-image: url('../../images/IMG_Sammy_BW5.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.mason-section__content__width {
-  width: 50%;
-}
-
 p {
   font-size: 1em;
   line-height: 2em;
@@ -37,12 +19,12 @@ li {
   list-style: none;
 }
 
-.mason-section--alternate__background {
-  background-color: #202040;
+a {
+  color: white;
 }
 
-.mason-section__faded {
-  opacity: 0.8;
+a:link {
+  text-decoration-line: none;
 }
 
 /*
@@ -122,12 +104,15 @@ header h2 {
   padding: 0 1.2em;
 }
 
-a {
-  color: white;
+/**
+ * Section Helpers
+ */
+.mason-section--alternate-background {
+  background-color: #202040;
 }
 
-a:link {
-  text-decoration-line: none;
+.mason-section__faded {
+  opacity: 0.8;
 }
 
 /**
@@ -169,17 +154,16 @@ a:link {
   margin-bottom: 2em;
 }
 
-.mason-section__content__storyright {
+.mason-section__content--storyright {
   position: relative;
   left: 38.7%;
 }
 
-.mason-section__header_left {
+.mason-section__header-left {
   position: relative;
   right: 38.7%;
 }
 
-/* Elements: BEM */
 .mason-section__quote,
 .mason-section__story {
   display: flex;
@@ -188,7 +172,7 @@ a:link {
   background-color: #202040;
 }
 
-.mason-section__header_image img {
+.mason-section__header-image img {
   text-align: center;
   opacity: 0.7;
   border-radius: 20%;
@@ -265,8 +249,4 @@ a:link {
  */
 #about-carousel {
   height: 40em;
-}
-
-.demo-separator {
-  color: dodgerblue;
 }

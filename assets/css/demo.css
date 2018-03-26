@@ -1,0 +1,15 @@
+.mason-demo-section {
+  margin-top: 2em;
+}
+
+.mason-demo-section__content--with-background {
+  background-image: url('../../images/IMG_Sammy_BW5.jpg');
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mason-demo-section__title {
+  padding-bottom: 1em;
+  color: dodgerblue;
+}

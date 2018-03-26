@@ -1,3 +1,13 @@
 {
-  "extends": "stylelint-config-standard"
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "@namics/stylelint-bem"
+  ],
+  "rules": {
+    "plugin/stylelint-bem-namics": {
+      "namespace": "mason-",
+      "patternPrefixes": [],
+      "helperPrefixes": []
+    }
+  }
 }
