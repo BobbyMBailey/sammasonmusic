@@ -10,6 +10,10 @@
 }
 
 .mason-demo-section__title {
-  padding-bottom: 1em;
+    padding-bottom: 1em;
   color: dodgerblue;
+}
+
+.big-text {
+  font-size: 60px;
 }
