@@ -244,6 +244,10 @@ header h2 {
   padding-right: 0.4em;
 }
 
+.big-text {
+  font-size: 600px;
+}
+
 /**
  * Page specific identifier styles (do not use class selectors)
  */
