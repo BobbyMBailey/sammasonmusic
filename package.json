@@ -8,9 +8,10 @@
   "license": "MIT",
   "scripts": {
     "test": "yarn lint",
-    "lint": "stylelint assets/css/mason.css"
+    "lint": "stylelint assets/css/mason.css assets/css/demo.css"
   },
   "devDependencies": {
+    "@namics/stylelint-bem": "^5.0.0",
     "stylelint": "^9.1.3",
     "stylelint-config-standard": "^18.2.0"
   }
