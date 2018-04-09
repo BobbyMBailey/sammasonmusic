@@ -24,7 +24,10 @@
     "vue-bem-cn": "^1.0.0"
   },
   "devDependencies": {
+    "@vue/cli-plugin-unit-mocha": "^3.0.0-beta.6",
+    "@vue/cli-service": "^3.0.0-beta.6",
     "@vue/eslint-config-standard": "^3.0.0-beta.6",
+    "@vue/test-utils": "^1.0.0-beta.13",
     "babel-eslint": "^8.2.1",
     "chai": "^4.1.2",
     "eslint": "^4.15.0",
