@@ -1,0 +1,12 @@
+$font-stack: 'Source Sans Pro', sans-serif;
+$color-primary: #333;
+
+body,
+html {
+  font: 100% $font-stack;
+  color: $color-primary;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  margin: 0;
+  overflow: scroll;
+}

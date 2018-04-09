@@ -433,3 +433,18 @@ jspm_packages/
 
 # next.js build output
 .next
+
+# VueJS
+.DS_Store
+/dist
+.dist
+
+/tests/e2e/videos/
+/tests/e2e/screenshots/
+
+# local env files
+.env.local
+.env.*.local
+
+# Nuxt build
+.nuxt

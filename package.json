@@ -7,12 +7,38 @@
   "author": "Robert Bailey",
   "license": "MIT",
   "scripts": {
-    "test": "yarn lint",
-    "lint": "stylelint assets/css/mason.css assets/css/demo.css"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "serve": "nuxt start",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test": "vue-cli-service test",
+    "e2e": "vue-cli-service e2e",
+    "lint": "eslint --ext .js,.vue .",
+    "lint:fix": "eslint --fix --ext .js,.vue .",
+    "e2e:open": "vue-cli-service e2e:open"
+  },
+  "dependencies": {
+    "nuxt": "^1.0.0",
+    "nuxt-fontawesome": "^0.1.3",
+    "vue-bem-cn": "^1.0.0"
   },
   "devDependencies": {
-    "@namics/stylelint-bem": "^5.0.0",
+    "@vue/eslint-config-standard": "^3.0.0-beta.6",
+    "babel-eslint": "^8.2.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "sass-loader": "^6.0.6",
+    "standard": "^11.0.1",
     "stylelint": "^9.1.3",
     "stylelint-config-standard": "^18.2.0"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }

@@ -1,0 +1,4 @@
+/** File is temporary while we have v1 */
+static/assets/js/*
+dist
+.nuxt
