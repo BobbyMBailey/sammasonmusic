@@ -1,6 +1,8 @@
 <template>
   <article>
-    <mason-section title="Typography">
+    <mason-section
+      title="Typography"
+      content-modifiers="mason-section__content--column">
       <div>
         <h1>Primary Heading</h1>
       </div>
@@ -20,7 +22,9 @@
         <p class="mason-typography--fineprint">Sam Mason 2018 &copy;</p>
       </div>
     </mason-section>
-    <mason-section title="Colors">
+    <mason-section
+      title="Colors"
+      content-modifiers="mason-section__content--column">
       <p class="atom-text-color--black">Hello this is a text color</p>
       <p class="atom-text-color--darkteal">Hello this is a text color</p>
       <p class="atom-text-color--lightteal">Hello this is a text color</p>
@@ -38,6 +42,16 @@
       <div class="atom-background-color--black">
         <a href="#">Take Me Away!</a>
       </div>
+    </mason-section>
+    <mason-section title="Section Default">
+      <img src="http://via.placeholder.com/200x200">
+      <p>Nullam et odio quam. Aenean interdum, nisl vitae dapibus tempor</p>
+    </mason-section>
+    <mason-section
+      title="Section as Column"
+      content-modifiers="mason-section__content--column">
+      <img src="http://via.placeholder.com/200x200">
+      <p>Fusce eget sapien eget neque euismod euismod. Suspendisse euismod nunc</p>
     </mason-section>
     <mason-section
       title="Footer">
