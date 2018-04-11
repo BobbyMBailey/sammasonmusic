@@ -2,28 +2,25 @@
   <article>
     <mason-section title="Typography">
       <div>
-        <p>Hello I am a paragraph</p>
+        <h1>Primary Heading</h1>
       </div>
       <div>
-        <h1>I am a header 1</h1>
+        <h2>Secondary Heading</h2>
       </div>
       <div>
-        <h2>I am a header 2</h2>
+        <h3>Tertiary Heading</h3>
       </div>
       <div>
-        <h3>I am a header 3</h3>
+        <p>Body Text</p>
       </div>
       <div>
-        <h4>I am a header 4</h4>
+        <p class="mason-typography--caption">Caption Text</p>
       </div>
       <div>
-        <h5>I am a header 5</h5>
-      </div>
-      <div>
-        <h6>I am a header 6</h6>
+        <p class="mason-typography--fineprint">Sam Mason 2018 &copy;</p>
       </div>
     </mason-section>
-    <mason title="Foreground text colors">
+    <mason-section title="Colors">
       <p class="atom-text-color--black">Hello this is a text color</p>
       <p class="atom-text-color--darkteal">Hello this is a text color</p>
       <p class="atom-text-color--lightteal">Hello this is a text color</p>
@@ -31,8 +28,6 @@
       <p class="atom-text-color--fadedgray atom-background-color--gray">Hello this is a text color</p>
       <p class="atom-text-color--gray">Hello this is a text color</p>
       <p class="atom-text-color--darkblue">Hello this is a text color</p>
-    </mason>
-    <mason-section title="Neutral Colors">
       <div class="mason-swatch atom-background-color--black"/>
       <div class="mason-swatch atom-background-color--darkteal"/>
       <div class="mason-swatch atom-background-color--lightteal"/>
