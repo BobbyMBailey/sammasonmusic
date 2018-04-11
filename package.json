@@ -39,6 +39,7 @@
     "eslint-loader": "^1.7.1",
     "eslint-plugin-cypress": "^2.0.1",
     "eslint-plugin-vue": "^4.0.0",
+    "modularscale-sass": "^3.0.5",
     "node-sass": "^4.8.3",
     "sass-loader": "^6.0.7",
     "standard": "^11.0.1",
