@@ -1,5 +1,12 @@
+@import '~modularscale-sass/stylesheets/modularscale';
+
 $font-stack: 'Source Sans Pro', sans-serif;
 $color-primary: #333;
+
+$modularscale: (
+  base: 1em,
+  ratio: 1.25
+);
 
 body,
 html {
@@ -9,4 +16,109 @@ html {
   height: 100%;
   margin: 0;
   overflow: scroll;
+}
+
+/*
+* atoms: typography
+*/
+
+h6 {
+  font-size: ms(0);
+}
+
+h5 {
+  font-size: ms(1);
+}
+
+h4 {
+  font-size: ms(2);
+}
+
+h3 {
+  font-size: ms(3);
+}
+
+h2 {
+  font-size: ms(4);
+}
+
+h1 {
+  font-size: ms(6);
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+/*
+* atoms: foreground text colors
+*/
+
+.atom-text-color--white {
+  color: rgb(255, 255, 255);
+}
+
+.atom-text-color--black {
+  color: rgb(0, 0, 0);
+}
+
+.atom-text-color--darkteal {
+  color: rgb(48, 63, 66);
+}
+
+.atom-text-color--lightteal {
+  color: rgb(85, 103, 106);
+}
+
+.atom-text-color--lighterteal {
+  color: rgb(108, 122, 125);
+}
+
+.atom-text-color--fadedgray {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.atom-text-color--gray {
+  color: rgb(128, 128, 128);
+}
+
+.atom-text-color--darkblue {
+  color: rgb(32, 32, 64);
+}
+
+/*
+* atoms: background text colors
+*/
+
+.atom-background-color--black {
+  background-color: rgb(0, 0, 0);
+}
+
+.atom-background-color--darkteal {
+  background-color: rgb(48, 63, 66);
+}
+
+.atom-background-color--lightteal {
+  background-color: rgb(85, 103, 106);
+}
+
+.atom-background-color--lighterteal {
+  background-color: rgb(108, 122, 125);
+}
+
+.atom-background-color--gray {
+  background-color: rgb(128, 128, 128);
+}
+
+/*
+* atoms: links
+*/
+
+a {
+  color: rgb(255, 255, 255);
+}
+
+a:link {
+  text-decoration-line: none;
 }
