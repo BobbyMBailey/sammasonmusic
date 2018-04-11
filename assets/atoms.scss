@@ -8,6 +8,13 @@ $modularscale: (
   ratio: 1.25
 );
 
+$typography-size-primary: ms(6);
+$typography-size-secondary: ms(4);
+$typography-size-tertiary: ms(3);
+$typography-size-body: ms(1);
+$typography-size-caption: ms(0);
+$typography-size-fineprint: ms(-1);
+
 body,
 html {
   font: 100% $font-stack;
@@ -22,34 +29,34 @@ html {
 * atoms: typography
 */
 
-h6 {
-  font-size: ms(0);
-}
-
-h5 {
-  font-size: ms(1);
-}
-
-h4 {
-  font-size: ms(2);
-}
-
 h3 {
-  font-size: ms(3);
+  font-size: $typography-size-tertiary;
 }
 
 h2 {
-  font-size: ms(4);
+  font-size: $typography-size-secondary;
 }
 
 h1 {
-  font-size: ms(6);
+  font-size: $typography-size-primary;
 }
 
 p {
-  font-size: 1.1em;
+  font-size: $typography-size-body;
   line-height: 1.5;
 }
+
+/* Typography: caption */
+.mason-typography--caption {
+  font-size: $typography-size-caption;
+}
+
+/* Typography: fine print */
+.mason-typography--fineprint {
+  font-size: $typography-size-fineprint;
+}
+
+/* Typography: 
 
 /*
 * atoms: foreground text colors
