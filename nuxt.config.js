@@ -11,9 +11,10 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Material+Icons' }
     ]
   },
+
   /*
   ** Customize the progress bar color
   */
@@ -31,7 +32,16 @@ module.exports = {
 
   modules: [
     '~/modules/vue-bem',
-    'nuxt-fontawesome'
+    ['nuxt-fontawesome', {
+      imports: [
+        {
+          set: '@fortawesome/fontawesome-free-solid'
+        },
+        {
+          set: '@fortawesome/fontawesome-free-brands'
+        }
+      ]
+    }]
   ],
 
   /*

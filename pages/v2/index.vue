@@ -2,36 +2,31 @@
   <section class="container">
     <div>
       <h1 class="title">
-        nuxt
+        Sam Mason Music
       </h1>
       <h2 class="subtitle">
-        Nuxt.js project
+        Progress
       </h2>
       <div class="links">
         <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
+          href="/v2/styleguide"
+          class="button--green">StyleGuide Molecules</a>
         <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+          href="/v2/styleguide"
+          class="button--blue">StyleGuide Organisms</a>
+        <div class="button--disabled">Home</div>
+        <div class="button--disabled">About Me</div>
+        <div class="button--disabled">Music</div>
+        <div class="button--disabled">Media</div>
+        <div class="button--disabled">Press</div>
+        <div class="button--disabled">Subscribe</div>
+        <div class="button--disabled">Contact</div>
       </div>
     </div>
   </section>
 </template>
 
-<script>
-import AppLogo from '~/components/AppLogo.vue'
-
-export default {
-  components: {
-    AppLogo
-  }
-}
-</script>
-
-<style>
+<style scoped>
 .container {
   min-height: 100vh;
   display: flex;
@@ -59,5 +54,65 @@ export default {
 
 .links {
   padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1080px;
+}
+
+.links a:first-child {
+  margin-right: 1em;
+  margin-top: 15px;
+}
+
+.links .button--green,
+.links .button--blue,
+.links .button--disabled {
+  margin-top: 15px;
+}
+
+.button--green {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #3b8070;
+  color: #3b8070;
+  text-decoration: none;
+  padding: 10px 30px;
+}
+
+.button--green:hover {
+  color: #fff;
+  background-color: #3b8070;
+}
+
+.button--blue {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #0002ff;
+  color: #0002ff;
+  text-decoration: none;
+  padding: 10px 30px;
+}
+
+.button--blue:hover {
+  color: #fff;
+  background-color: #62a4ff;
+  border-color: #62a4ff;
+}
+
+.button--disabled {
+  cursor: default;
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #35495e;
+  color: #35495e;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+}
+
+.button--disabled:hover {
+  color: #35495e;
+  background-color: white;
 }
 </style>

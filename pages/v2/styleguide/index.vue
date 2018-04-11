@@ -1,10 +1,7 @@
 <template>
   <article>
-    <mason-section title="Example">
-      <mason-footer/>
-    </mason-section>
-
-    <mason-section title="Full Width">
+    <mason-section
+      title="Footer">
       <mason-footer/>
     </mason-section>
   </article>
@@ -24,5 +21,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

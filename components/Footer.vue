@@ -1,37 +1,42 @@
 <template>
   <footer class="mason-footer">
-    <div>
-      <ul class="mason-social">
-        <li><a
-          href="https://facebook.com/sammasonmusic"
-          target="_blank"><i class="fab fa-facebook mason-social__icon"/>Facebook</a></li>
-        <li><a
-          href="https://instagram.com/sammasonmusic"
-          target="_blank"><i class="fab fa-instagram mason-social__icon"/>Instagram</a></li>
-        <li><a
-          href="https://twitter.com/sammasonmusic"
-          target="_blank"><i class="fab fa-twitter mason-social__icon"/>Twitter</a></li>
-        <li><a
-          href="https://itunes.apple.com/us/artist/sam-mason/id126382024"
-          target="_blank"><i class="fab fa-apple mason-social__icon"/>iTunes</a></li>
-        <li><a
-          href="http://a.co/25kYCom"
-          target="_blank"><i class="fab fa-amazon mason-social__icon"/>Amazon</a></li>
-        <li><a
-          href="https://open.spotify.com/artist/27aimHoc7Q3MC3N6opoled"
-          target="_blank"><i class="fab fa-spotify mason-social__icon"/>Spotify</a></li>
-        <li><a
-          href="https://soundcloud.com/sammason"
-          target="_blank"><i class="fab fa-soundcloud mason-social__icon"/>Soundcloud</a></li>
-        <li><a
-          href="http://www.youtube.com/sammasonmusic1"
-          target="_blank"><i class="fab fa-youtube mason-social__icon"/>YouTube</a></li>
-      </ul>
-    </div>
+    <social-links :items="socialItems" />
     <span class="mason-typography--fineprint">Sam Mason 2018 &copy;</span>
   </footer>
 </template>
 
-<style>
+<script>
+import SocialLinks from '~/components/SocialLinks.vue'
+export default {
+  name: 'Footer',
+  components: {
+    SocialLinks
+  },
+  data () {
+    return {
+      socialItems: [
+        {label: 'Facebook', icon: 'facebook', link: 'https://facebook.com/sammasonmusic'},
+        {label: 'Instagram', icon: 'instagram', link: 'https://instagram.com/sammasonmusic'},
+        {label: 'Twitter', icon: 'twitter', link: 'https://twitter.com/sammasonmusic'},
+        {label: 'iTunes', icon: 'apple', link: 'https://itunes.apple.com/us/artist/sam-mason/id126382024'},
+        {label: 'Amazon', icon: 'amazon', link: 'http://a.co/25kYCom'},
+        {label: 'Spotify', icon: 'spotify', link: 'https://open.spotify.com/artist/27aimHoc7Q3MC3N6opoled'},
+        {label: 'Soundcloud', icon: 'soundcloud', link: 'https://soundcloud.com/sammason'},
+        {label: 'YouTube', icon: 'youtube', link: 'http://www.youtube.com/sammasonmusic1'}
+      ]
+    }
+  }
+}
+</script>
 
+<style>
+  .mason-footer {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 0;
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
 </style>

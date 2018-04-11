@@ -1,12 +1,10 @@
 import Vue from 'vue'
 import VueBemCn from 'vue-bem-cn'
 
-const bemConfig = {
+Vue.use(VueBemCn, {
   methodName: 'bem',
   hyphenate: true,
   delimiters: {
     ns: 'mason-'
   }
-}
-
-Vue.use(VueBemCn, bemConfig)
+})
