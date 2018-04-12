@@ -51,7 +51,24 @@
       title="Section as Column"
       content-modifiers="mason-section__content--column">
       <img src="http://via.placeholder.com/200x200">
-      <p>Fusce eget sapien eget neque euismod euismod. Suspendisse euismod nunc</p>
+      <p>Fusce eget sapien eget neque euismod euismod.</p>
+    </mason-section>
+    <mason-section
+      title="Cards"
+      class="atom-background-color--lightteal">
+      <mason-card>
+        <img
+          slot="media"
+          src="http://via.placeholder.com/200x200">
+        <h1 slot="title">Cards are cool!</h1>
+        <p slot="text">Suspendisse euismod nunc</p>
+      </mason-card>
+      <mason-card>
+        <img
+          slot="media"
+          src="http://via.placeholder.com/200x200">
+        <p slot="text">Just the text</p>
+      </mason-card>
     </mason-section>
     <mason-section
       title="Footer">
@@ -63,12 +80,14 @@
 <script>
 import MasonSection from '~/components/Section.vue'
 import MasonFooter from '~/components/Footer.vue'
+import MasonCard from '~/components/Card.vue'
 
 export default {
   layout: 'styleguide',
   components: {
     MasonFooter,
-    MasonSection
+    MasonSection,
+    MasonCard
   }
 }
 </script>
