@@ -19,11 +19,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
   .mason-card {
     display: flex;
     flex-direction: column;
-    width: 21.875em;
+    width: 200px;
     border-radius: 4px;
     box-sizing: border-box;
     margin: 1em;
