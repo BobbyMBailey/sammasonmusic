@@ -53,25 +53,49 @@
       <img src="http://via.placeholder.com/200x200">
       <p>Fusce eget sapien eget neque euismod euismod.</p>
     </mason-section>
-    <mason-section
-      title="Cards"
-      class="atom-background-color--lightteal">
+    <mason-section title="Cards">
       <mason-card>
         <img
           slot="media"
-          src="http://via.placeholder.com/200x200">
-        <h1 slot="title">Cards are cool!</h1>
+          src="http://via.placeholder.com/350x200">
+        <h3 slot="title">Card Title</h3>
         <p slot="text">Suspendisse euismod nunc</p>
       </mason-card>
       <mason-card>
         <img
           slot="media"
-          src="http://via.placeholder.com/200x200">
-        <p slot="text">Just the text</p>
+          src="http://via.placeholder.com/350x200">
+        <p slot="text">Card Text</p>
+      </mason-card>
+      <mason-card>
+        <img
+          slot="media"
+          src="http://via.placeholder.com/350x200">
+        <h3 slot="title">Card Title</h3>
+      </mason-card>
+      <mason-card class="mason-card--full">
+        <img
+          slot="media"
+          src="http://via.placeholder.com/1048x200">
+        <h3 slot="title">Full Card</h3>
+        <p slot="text">Suspendisse euismod nunc</p>
+      </mason-card>
+      <mason-card class="mason-card--medium">
+        <img
+          slot="media"
+          src="http://via.placeholder.com/540x200">
+        <h3 slot="title">Medium Card</h3>
+        <p slot="text">Suspendisse euismod nunc</p>
+      </mason-card>
+      <mason-card class="mason-card--small">
+        <img
+          slot="media"
+          src="http://via.placeholder.com/356x200">
+        <h3 slot="title">Small Card</h3>
+        <p slot="text">Suspendisse euismod nunc</p>
       </mason-card>
     </mason-section>
-    <mason-section
-      title="Footer">
+    <mason-section title="Footer">
       <mason-footer/>
     </mason-section>
   </article>
