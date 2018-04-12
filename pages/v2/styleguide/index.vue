@@ -51,10 +51,51 @@
       title="Section as Column"
       content-modifiers="mason-section__content--column">
       <img src="http://via.placeholder.com/200x200">
-      <p>Fusce eget sapien eget neque euismod euismod. Suspendisse euismod nunc</p>
+      <p>Fusce eget sapien eget neque euismod euismod.</p>
     </mason-section>
-    <mason-section
-      title="Footer">
+    <mason-section title="Cards">
+      <mason-card>
+        <img
+          slot="media"
+          src="http://via.placeholder.com/350x200">
+        <h3 slot="title">Card Title</h3>
+        <p slot="text">Suspendisse euismod nunc</p>
+      </mason-card>
+      <mason-card>
+        <img
+          slot="media"
+          src="http://via.placeholder.com/350x200">
+        <p slot="text">Card Text</p>
+      </mason-card>
+      <mason-card>
+        <img
+          slot="media"
+          src="http://via.placeholder.com/350x200">
+        <h3 slot="title">Card Title</h3>
+      </mason-card>
+      <mason-card class="mason-card--full">
+        <img
+          slot="media"
+          src="http://via.placeholder.com/1048x200">
+        <h3 slot="title">Full Card</h3>
+        <p slot="text">Suspendisse euismod nunc</p>
+      </mason-card>
+      <mason-card class="mason-card--medium">
+        <img
+          slot="media"
+          src="http://via.placeholder.com/540x200">
+        <h3 slot="title">Medium Card</h3>
+        <p slot="text">Suspendisse euismod nunc</p>
+      </mason-card>
+      <mason-card class="mason-card--small">
+        <img
+          slot="media"
+          src="http://via.placeholder.com/356x200">
+        <h3 slot="title">Small Card</h3>
+        <p slot="text">Suspendisse euismod nunc</p>
+      </mason-card>
+    </mason-section>
+    <mason-section title="Footer">
       <mason-footer/>
     </mason-section>
   </article>
@@ -63,12 +104,14 @@
 <script>
 import MasonSection from '~/components/Section.vue'
 import MasonFooter from '~/components/Footer.vue'
+import MasonCard from '~/components/Card.vue'
 
 export default {
   layout: 'styleguide',
   components: {
     MasonFooter,
-    MasonSection
+    MasonSection,
+    MasonCard
   }
 }
 </script>
