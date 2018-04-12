@@ -56,18 +56,24 @@
     <mason-section
       title="Cards"
       class="atom-background-color--lightteal">
-      <mason-card>
+      <mason-card
+        class="mason-card">
         <img
           slot="media"
           src="http://via.placeholder.com/200x200">
         <h1 slot="title">Cards are cool!</h1>
-        <p slot="text">Suspendisse euismod nunc</p>
+        <p
+          slot="text"
+          class="mason-card__text">Suspendisse euismod nunc</p>
       </mason-card>
-      <mason-card>
+      <mason-card
+        class="mason-card">
         <img
           slot="media"
           src="http://via.placeholder.com/200x200">
-        <p slot="text">Just the text</p>
+        <p
+          slot="text"
+          class="mason-card__text">Just the text</p>
       </mason-card>
     </mason-section>
     <mason-section
