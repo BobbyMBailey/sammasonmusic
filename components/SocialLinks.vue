@@ -42,6 +42,6 @@ export default {
   }
 
   .mason-social-links__icon {
-    color: grey;
+    color: rgb(128, 128, 128);
   }
 </style>

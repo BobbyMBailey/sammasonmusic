@@ -29,20 +29,20 @@ export default {
   .mason-section {
     display: flex;
     flex-direction: column;
-    width: 100%;
     margin: 0;
-    padding-top: 2em;
     padding-bottom: 2em;
+    padding-top: 2em;
+    width: 100%;
   }
 
   .mason-section__content {
-    max-width: $content-max-width;
-    display: flex;
-    align-self: center;
-    justify-content: left;
     align-items: left;
-    overflow: hidden;
+    align-self: center;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: left;
+    max-width: $content-max-width;
+    overflow: hidden;
     width: 100%;
   }
 
@@ -51,11 +51,11 @@ export default {
   }
 
   .mason-section__title {
-    padding-bottom: 1em;
-    color: dodgerblue;
-    display: flex;
     align-self: center;
+    color: rgb(30, 144, 255);
+    display: flex;
     max-width: 1160px;
+    padding-bottom: 1em;
     width: 100%;
   }
 </style>
