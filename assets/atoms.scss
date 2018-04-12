@@ -17,9 +17,9 @@ $typography-size-fineprint: ms(-1);
 
 body,
 html {
-  font: 100% $font-stack;
-  color: $color-primary;
   background-color: rgb(255, 255, 255);
+  color: $color-primary;
+  font: 100% $font-stack;
   height: 100%;
   margin: 0;
   overflow: scroll;
@@ -28,7 +28,6 @@ html {
 /*
 * atoms: typography
 */
-
 h3 {
   font-size: $typography-size-tertiary;
 }
@@ -56,12 +55,9 @@ p {
   font-size: $typography-size-fineprint;
 }
 
-/* Typography: 
-
-/*
-* atoms: foreground text colors
-*/
-
+/**
+ * Typography
+ */
 .atom-text-color--white {
   color: rgb(255, 255, 255);
 }

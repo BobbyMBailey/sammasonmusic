@@ -31,12 +31,12 @@ export default {
 
 <style>
   .mason-footer {
+    bottom: 0;
+    margin: 0 auto;
+    padding-bottom: 1em;
+    padding-top: 1em;
     position: relative;
     text-align: center;
     width: 100%;
-    margin: 0 auto;
-    bottom: 0;
-    padding-bottom: 1em;
-    padding-top: 1em;
   }
 </style>

@@ -9,7 +9,7 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Sam Mason Music' },
       /** Eventually this will move just to the StyleGuide layout as https://github.com/nuxt/nuxt.js/issues/3036 */
-      { hid: 'robots', name: 'robots', content: 'noindex'}
+      { hid: 'robots', name: 'robots', content: 'noindex' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -55,12 +55,29 @@ module.exports = {
     */
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
+        config.module.rules.push(
+          {
+            enforce: 'pre',
+            test: /\.(js|vue)$/,
+            loader: 'eslint-loader',
+            exclude: /(node_modules)/
+          },
+          {
+            test: /\.vue$/,
+            loader: 'vue-loader',
+            options: {
+              loaders: {
+                scss: 'vue-style-loader!css-loader!sass-loader' // <style lang="scss">
+              },
+              postcss: [require('postcss-cssnext')()]
+            }
+          },
+          {
+            test: /\.(scss)$/,
+            loader: 'sass-loader',
+            exclude: /(node_modules)/
+          }
+        )
       }
     }
   }
