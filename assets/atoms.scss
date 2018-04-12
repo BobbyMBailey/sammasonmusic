@@ -15,6 +15,18 @@ $typography-size-body: ms(1);
 $typography-size-caption: ms(0);
 $typography-size-fineprint: ms(-1);
 
+$typography-color--primary-white: rgb(255, 255, 255);
+$typography-color--primary-black: rgb(0, 0, 0);
+$typography-color--secondary-black: rgb(24, 24, 24);
+$typography-color--tertiary-black: rgb(64, 64, 64);
+$typography-color--primary-gray: rgb(128, 128, 128);
+
+$typography-background-color--primary-white: rgb(255, 255, 255);
+$typography-background-color--primary-black: rgb(0, 0, 0);
+$typography-background-color--secondary-black: rgb(24, 24, 24);
+$typography-background-color--tertiary-black: rgb(64, 64, 64);
+$typography-background-color--primary-gray: rgb(128, 128, 128);
+
 body,
 html {
   background-color: rgb(255, 255, 255);
@@ -55,63 +67,52 @@ p {
   font-size: $typography-size-fineprint;
 }
 
-/**
- * Typography
- */
-.atom-text-color--white {
-  color: rgb(255, 255, 255);
+/*
+* atoms: text colors
+*/
+
+.atom-text-color--primary-white {
+  color: $typography-color--primary-white;
 }
 
-.atom-text-color--black {
-  color: rgb(0, 0, 0);
+.atom-text-color--primary-black {
+  color: $typography-color--primary-black;
 }
 
-.atom-text-color--darkteal {
-  color: rgb(48, 63, 66);
+.atom-text-color--secondary-black {
+  color: $typography-color--secondary-black;
 }
 
-.atom-text-color--lightteal {
-  color: rgb(85, 103, 106);
+.atom-text-color--tertiary-black {
+  color: $typography-color--tertiary-black;
 }
 
-.atom-text-color--lighterteal {
-  color: rgb(108, 122, 125);
-}
-
-.atom-text-color--fadedgray {
-  color: rgba(255, 255, 255, 0.2);
-}
-
-.atom-text-color--gray {
-  color: rgb(128, 128, 128);
-}
-
-.atom-text-color--darkblue {
-  color: rgb(32, 32, 64);
+.atom-text-color--primary-gray {
+  color: $typography-color--primary-gray;
 }
 
 /*
-* atoms: background text colors
+* atoms: background colors
 */
 
-.atom-background-color--black {
-  background-color: rgb(0, 0, 0);
+.atom-background-color--primary-white {
+  background-color: $typography-background-color--primary-white;
 }
 
-.atom-background-color--darkteal {
-  background-color: rgb(48, 63, 66);
+.atom-background-color--primary-black {
+  background-color: $typography-background-color--primary-black;
 }
 
-.atom-background-color--lightteal {
-  background-color: rgb(85, 103, 106);
+.atom-background-color--secondary-black {
+  background-color: $typography-background-color--secondary-black;
 }
 
-.atom-background-color--lighterteal {
-  background-color: rgb(108, 122, 125);
+.atom-background-color--tertiary-black {
+  background-color: $typography-background-color--tertiary-black;
 }
 
-.atom-background-color--gray {
-  background-color: rgb(128, 128, 128);
+.atom-background-color--primary-gray {
+  background-color: $typography-background-color--primary-gray;
 }
 
 /*

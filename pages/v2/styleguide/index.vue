@@ -25,21 +25,18 @@
     <mason-section
       title="Colors"
       content-modifiers="mason-section__content--column">
-      <p class="atom-text-color--black">Hello this is a text color</p>
-      <p class="atom-text-color--darkteal">Hello this is a text color</p>
-      <p class="atom-text-color--lightteal">Hello this is a text color</p>
-      <p class="atom-text-color--lighterteal">Hello this is a text color</p>
-      <p class="atom-text-color--fadedgray atom-background-color--gray">Hello this is a text color</p>
-      <p class="atom-text-color--gray">Hello this is a text color</p>
-      <p class="atom-text-color--darkblue">Hello this is a text color</p>
-      <div class="mason-swatch atom-background-color--black"/>
-      <div class="mason-swatch atom-background-color--darkteal"/>
-      <div class="mason-swatch atom-background-color--lightteal"/>
-      <div class="mason-swatch atom-background-color--lighterteal"/>
-      <div class="mason-swatch atom-background-color--gray"/>
+      <p class="atom-text-color--primary-white atom-background-color--gray">Primary White Text Color</p>
+      <p class="atom-text-color--primary-black">Primary Black Text Color</p>
+      <p class="atom-text-color--secondary-black">Secondary Black Text Color</p>
+      <p class="atom-text-color--tertiary-black">Tertiary Black Text Color</p>
+      <p class="atom-text-color--primary-gray">Primary Gray</p>
+      <div class="mason-swatch atom-background-color--primary-black"/>
+      <div class="mason-swatch atom-background-color--secondary-black"/>
+      <div class="mason-swatch atom-background-color--tertiary-black"/>
+      <div class="mason-swatch atom-background-color--primary-gray"/>
     </mason-section>
     <mason-section title="Links">
-      <div class="atom-background-color--black">
+      <div class="atom-background-color--primary-gray">
         <a href="#">Take Me Away!</a>
       </div>
     </mason-section>
