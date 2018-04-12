@@ -1,8 +1,10 @@
 // https://docs.cypress.io/api/introduction/api.html
 
-describe('My First Test', () => {
-  it('Visits the Kitchen Sink', () => {
-    cy.visit('/')
-    cy.contains('h1', 'Welcome to Your Vue.js App')
+describe('PreLaunch', () => {
+  it('no robot indexing', () => {
+    cy.visit('/v2')
+    cy.document().its('head').get('meta[content="noindex"][name="robots"]').should('to.have.length', 1)
+    cy.visit('/v2/styleguide')
+    cy.document().its('head').get('meta[content="noindex"][name="robots"]').should('to.have.length', 1)
   })
 })

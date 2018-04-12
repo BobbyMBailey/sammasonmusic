@@ -9,14 +9,14 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "serve": "nuxt start",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "test": "vue-cli-service test",
-    "e2e": "vue-cli-service e2e",
+    "e2e": "concurrently --success=first --kill-others 'yarn build && yarn start' 'yarn e2e:run' ",
+    "e2e:run": "wait-on http://localhost:3000 && vue-cli-service e2e --url=http://localhost:3000/",
+    "e2e:open": "vue-cli-service e2e:open --url=http://localhost:3000/",
     "lint": "eslint --ext .js,.vue .",
-    "lint:fix": "eslint --fix --ext .js,.vue .",
-    "e2e:open": "vue-cli-service e2e:open"
+    "lint:fix": "eslint --fix --ext .js,.vue ."
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.5",
@@ -28,12 +28,14 @@
     "vue-bem-cn": "^1.0.0"
   },
   "devDependencies": {
+    "@vue/cli-plugin-e2e-cypress": "^3.0.0-beta.6",
     "@vue/cli-plugin-unit-mocha": "^3.0.0-beta.6",
     "@vue/cli-service": "^3.0.0-beta.6",
     "@vue/eslint-config-standard": "^3.0.0-beta.6",
     "@vue/test-utils": "^1.0.0-beta.13",
     "babel-eslint": "^8.2.1",
     "chai": "^4.1.2",
+    "concurrently": "^3.5.1",
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
@@ -44,7 +46,8 @@
     "sass-loader": "^6.0.7",
     "standard": "^11.0.1",
     "stylelint": "^9.1.3",
-    "stylelint-config-standard": "^18.2.0"
+    "stylelint-config-standard": "^18.2.0",
+    "wait-on": "^2.1.0"
   },
   "browserslist": [
     "> 1%",
