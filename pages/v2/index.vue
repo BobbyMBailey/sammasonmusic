@@ -8,12 +8,14 @@
         Progress
       </h2>
       <div class="links">
-        <a
-          href="/v2/styleguide"
-          class="button--green">StyleGuide Molecules</a>
-        <a
-          href="/v2/styleguide"
-          class="button--blue">StyleGuide Organisms</a>
+        <nuxt-link
+          to="/v2/styleguide"
+          class="button--green"
+          replace>StyleGuide Molecules</nuxt-link>
+        <nuxt-link
+          to="/v2/styleguide#Organisms"
+          class="button--blue"
+          replace>StyleGuide Organisms</nuxt-link>
         <div class="button--disabled">Home</div>
         <div class="button--disabled">About Me</div>
         <div class="button--disabled">Music</div>

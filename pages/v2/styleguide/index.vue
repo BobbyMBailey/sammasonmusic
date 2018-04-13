@@ -95,6 +95,12 @@
         <p slot="text">Suspendisse euismod nunc</p>
       </mason-card>
     </mason-section>
+    <mason-section
+      id="Organisms"
+      title="Organisms">
+      <p>"Building up from molecules to more elaborate organisms provides designers and developers with an important sense of context. Organisms demonstrate those smaller, simpler components in action and serve as distinct patterns that can be used again and again. The product grid organism can be employed anywhere a group of products needs to be displayed, from category listings to search results to related products."</p>
+      <p class="mason-typography--fineprint">Brad Frost</p>
+    </mason-section>
     <mason-section title="Footer">
       <mason-footer/>
     </mason-section>
