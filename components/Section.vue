@@ -1,6 +1,6 @@
 <template>
   <section :class="bem()">
-    <div :class="bem('title')"><h1>{{ title }}</h1></div>
+    <div :class="bem('title')"><h1 :id="id">{{ title }}</h1></div>
     <div :class="bem('content', contentModifiers)">
       <slot/>
     </div>
@@ -11,6 +11,10 @@
 export default {
   name: 'Section',
   props: {
+    id: {
+      type: String,
+      default: ''
+    },
     title: {
       type: String,
       default: ''

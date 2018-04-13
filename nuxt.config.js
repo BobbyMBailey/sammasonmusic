@@ -34,6 +34,20 @@ module.exports = {
 
   modules: [
     '~/modules/vue-bem',
+    ['nuxt-seo-module', {
+      baseUrl: 'http://www.sammasonmusic.com',
+      noGeneratedSitemapInRobotsTxT: true,
+      sitemap: [{
+        generate: true,
+        baseUrl: 'http://www.sammasonmusic.com',
+        path: 'sitemap.v2.xml'
+      }],
+      robots: {
+        UserAgent: '*',
+        Disallow: '/v2',
+        Sitemap: 'sitemap.xml'
+      }
+    }],
     ['nuxt-fontawesome', {
       imports: [
         {
@@ -55,6 +69,8 @@ module.exports = {
     */
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
+        // https://github.com/vuejs/vue/tree/dev/dist
+        config.resolve.alias['vue$'] = 'vue/dist/vue.esm.js'
         config.module.rules.push(
           {
             enforce: 'pre',
@@ -63,16 +79,21 @@ module.exports = {
             exclude: /(node_modules)/
           },
           {
-            test: /\.vue$/,
+            enforce: 'pre',
+            test: /\.(vue)$/,
             loader: 'vue-loader',
             options: {
               loaders: {
-                scss: 'vue-style-loader!css-loader!sass-loader' // <style lang="scss">
+                scss: 'vue-style-loader!css-loader!sass-loader'
               },
-              postcss: [require('postcss-cssnext')()]
+              postcss: [
+                require('postcss-cssnext')(),
+                require('postcss-html')()
+              ]
             }
           },
           {
+            enforce: 'pre',
             test: /\.(scss)$/,
             loader: 'sass-loader',
             exclude: /(node_modules)/
