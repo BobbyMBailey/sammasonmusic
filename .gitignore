@@ -448,3 +448,5 @@ jspm_packages/
 
 # Nuxt build
 .nuxt
+static/robots.txt
+static/sitemap.v2.xml
