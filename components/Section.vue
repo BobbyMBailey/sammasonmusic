@@ -1,6 +1,8 @@
 <template>
   <section :class="bem()">
-    <div :class="bem('title')"><h1 :id="id">{{ title }}</h1></div>
+    <div :class="bem('title')">
+      <h1 :id="id">{{ title }} <slot name="title"/></h1>
+    </div>
     <div :class="bem('content', contentModifiers)">
       <slot/>
     </div>
@@ -56,7 +58,6 @@ export default {
 
   .mason-section__title {
     align-self: center;
-    color: rgb(30, 144, 255);
     display: flex;
     max-width: 1160px;
     padding-bottom: 1em;

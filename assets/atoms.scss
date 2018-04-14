@@ -1,36 +1,10 @@
-@import '~modularscale-sass/stylesheets/modularscale';
-
-$font-stack: 'Source Sans Pro', sans-serif;
-$color-primary: #333;
-
-$modularscale: (
-  base: 1em,
-  ratio: 1.25
-);
-
-$typography-size-primary: ms(6);
-$typography-size-secondary: ms(4);
-$typography-size-tertiary: ms(3);
-$typography-size-body: ms(1);
-$typography-size-caption: ms(0);
-$typography-size-fineprint: ms(-1);
-
-$typography-color--primary-white: rgb(255, 255, 255);
-$typography-color--primary-black: rgb(0, 0, 0);
-$typography-color--secondary-black: rgb(24, 24, 24);
-$typography-color--tertiary-black: rgb(64, 64, 64);
-$typography-color--primary-gray: rgb(128, 128, 128);
-
-$typography-background-color--primary-white: rgb(255, 255, 255);
-$typography-background-color--primary-black: rgb(0, 0, 0);
-$typography-background-color--secondary-black: rgb(24, 24, 24);
-$typography-background-color--tertiary-black: rgb(64, 64, 64);
-$typography-background-color--primary-gray: rgb(128, 128, 128);
+@import 'theme/typography';
+@import 'theme/colors';
 
 body,
 html {
   background-color: rgb(255, 255, 255);
-  color: $color-primary;
+  color: $typography-color--primary;
   font: 100% $font-stack;
   height: 100%;
   margin: 0;
@@ -64,63 +38,70 @@ p {
 
 /* Typography: fine print */
 .mason-typography--fineprint {
+  color: $typography-color--tertiary;
   font-size: $typography-size-fineprint;
 }
 
 /*
 * atoms: text colors
 */
-
-.atom-text-color--primary-white {
-  color: $typography-color--primary-white;
+.atom-text-color--primary {
+  color: $typography-color--primary;
 }
 
-.atom-text-color--primary-black {
-  color: $typography-color--primary-black;
+.atom-text-color--secondary {
+  color: $typography-color--secondary;
 }
 
-.atom-text-color--secondary-black {
-  color: $typography-color--secondary-black;
+.atom-text-color--tertiary {
+  color: $typography-color--tertiary;
 }
 
-.atom-text-color--tertiary-black {
-  color: $typography-color--tertiary-black;
+.atom-text-color--primary-dark {
+  color: $typography-color--primary-dark;
 }
 
-.atom-text-color--primary-gray {
-  color: $typography-color--primary-gray;
+.atom-text-color--secondary-dark {
+  color: $typography-color--secondary-dark;
+}
+
+.atom-text-color--tertiary-dark {
+  color: $typography-color--tertiary-dark;
 }
 
 /*
 * atoms: background colors
 */
-
-.atom-background-color--primary-white {
-  background-color: $typography-background-color--primary-white;
+.atom-background-color--primary {
+  background-color: $theme-background-color--primary;
 }
 
-.atom-background-color--primary-black {
-  background-color: $typography-background-color--primary-black;
+.atom-background-color--secondary {
+  background-color: $theme-background-color--secondary;
 }
 
-.atom-background-color--secondary-black {
-  background-color: $typography-background-color--secondary-black;
+.atom-background-color--tertiary {
+  background-color: $theme-background-color--tertiary;
 }
 
-.atom-background-color--tertiary-black {
-  background-color: $typography-background-color--tertiary-black;
+.atom-background-color--primary-dark {
+  background-color: $theme-background-color--primary-dark;
 }
 
-.atom-background-color--primary-gray {
-  background-color: $typography-background-color--primary-gray;
+.atom-background-color--secondary-dark {
+  background-color: $theme-background-color--secondary-dark;
+}
+
+.atom-background-color--tertiary-dark {
+  background-color: $theme-background-color--tertiary-dark;
 }
 
 /*
 * atoms: links
 */
-
 a {
-  color: rgb(255, 255, 255);
+  color: invert($typography-color--primary);
+  cursor: pointer;
 }
 
 a:link {

@@ -1,8 +1,20 @@
 <template>
   <article>
+    <mason-section title="Atoms & Molecules">
+      <font-awesome-icon :icon="['fa', 'check']" style="color: blue;" slot="title"/>
+      <h2><font-awesome-icon :icon="['fa', 'quote-left']" class="atom-text-color--tertiary"/></h2>
+      <p>
+        If atoms are the basic building blocks of matter, then the atoms of our interfaces serve as the foundational building blocks that comprise all our user interfaces. These atoms include basic HTML elements like form labels, inputs, buttons, and others that can’t be broken down any further without ceasing to be functional.
+      </p>
+      <p>
+        In the context of a pattern library, atoms demonstrate all your base styles at a glance, which can be a helpful reference to keep coming back to as you develop and maintain your design system. But like atoms in the natural world, interface atoms don’t exist in a vacuum and only really come to life with application.
+      </p>
+      <p class="mason-typography--fineprint">Brad Frost</p>
+    </mason-section>
     <mason-section
       title="Typography"
       content-modifiers="mason-section__content--column">
+      <font-awesome-icon :icon="['fa', 'check']" style="color: lightgreen;" slot="title"/>
       <div>
         <h1>Primary Heading</h1>
       </div>
@@ -25,32 +37,51 @@
     <mason-section
       title="Colors"
       content-modifiers="mason-section__content--column">
-      <p class="atom-text-color--primary-white atom-background-color--gray">Primary White Text Color</p>
-      <p class="atom-text-color--primary-black">Primary Black Text Color</p>
-      <p class="atom-text-color--secondary-black">Secondary Black Text Color</p>
-      <p class="atom-text-color--tertiary-black">Tertiary Black Text Color</p>
-      <p class="atom-text-color--primary-gray">Primary Gray</p>
-      <div class="mason-swatch atom-background-color--primary-black"/>
-      <div class="mason-swatch atom-background-color--secondary-black"/>
-      <div class="mason-swatch atom-background-color--tertiary-black"/>
-      <div class="mason-swatch atom-background-color--primary-gray"/>
+      <font-awesome-icon :icon="['fa', 'check']" style="color: lightgreen;" slot="title"/>
+      <span>Primary</span>
+      <div class="mason-swatch atom-background-color--primary"/>
+      <span>Secondary</span>
+      <div class="mason-swatch atom-background-color--secondary"/>
+      <span>Tertiary</span>
+      <div class="mason-swatch atom-background-color--tertiary"/>
+      <hr/>
+      <span>Primary Dark</span>
+      <div class="mason-swatch atom-background-color--primary-dark"/>
+      <span>Secondary Dark</span>
+      <div class="mason-swatch atom-background-color--secondary-dark"/>
+      <span>Tertiary Dark</span>
+      <div class="mason-swatch atom-background-color--tertiary-dark"/>
+    </mason-section>
+    <mason-section
+      title="Colors Typography"
+      content-modifiers="mason-section__content--column">
+      <font-awesome-icon :icon="['fa', 'check']" style="color: lightgreen;" slot="title"/>
+      <p class="atom-text-color--primary atom-background-color--primary">Primary</p>
+      <p class="atom-text-color--secondary">Secondary</p>
+      <p class="atom-text-color--primary-dark">Primary Dark</p>
+      <p class="atom-text-color--secondary-dark">Secondary Dark</p>
+      <p class="atom-text-color--tertiary-dark">Tertiary Dark</p>
     </mason-section>
     <mason-section title="Links">
-      <div class="atom-background-color--primary-gray">
+      <font-awesome-icon :icon="['fa', 'check']" style="color: lightgreen;" slot="title"/>
+      <div class="atom-background-color--secondary">
         <a href="#">Take Me Away!</a>
       </div>
     </mason-section>
     <mason-section title="Section Default">
+      <font-awesome-icon :icon="['fa', 'check']" style="color: lightgreen;" slot="title"/>
       <img src="http://via.placeholder.com/200x200">
       <p>Nullam et odio quam. Aenean interdum, nisl vitae dapibus tempor</p>
     </mason-section>
     <mason-section
       title="Section as Column"
       content-modifiers="mason-section__content--column">
+      <font-awesome-icon :icon="['fa', 'check']" style="color: lightgreen;" slot="title"/>
       <img src="http://via.placeholder.com/200x200">
       <p>Fusce eget sapien eget neque euismod euismod.</p>
     </mason-section>
     <mason-section title="Cards">
+      <font-awesome-icon :icon="['fa', 'check']" style="color: lightgreen;" slot="title"/>
       <mason-card>
         <img
           slot="media"
@@ -92,13 +123,19 @@
         <p slot="text">Suspendisse euismod nunc</p>
       </mason-card>
     </mason-section>
+    <hr/>
     <mason-section
       id="Organisms"
       title="Organisms">
-      <p>"Building up from molecules to more elaborate organisms provides designers and developers with an important sense of context. Organisms demonstrate those smaller, simpler components in action and serve as distinct patterns that can be used again and again. The product grid organism can be employed anywhere a group of products needs to be displayed, from category listings to search results to related products."</p>
+      <font-awesome-icon :icon="['fa', 'check']" style="color: blue;" slot="title"/>
+      <h2><font-awesome-icon :icon="['fa', 'quote-left']" class="atom-text-color--tertiary"/></h2>
+      <p>
+        Building up from molecules to more elaborate organisms provides designers and developers with an important sense of context. Organisms demonstrate those smaller, simpler components in action and serve as distinct patterns that can be used again and again. The product grid organism can be employed anywhere a group of products needs to be displayed, from category listings to search results to related products.
+      </p>
       <p class="mason-typography--fineprint">Brad Frost</p>
     </mason-section>
     <mason-section title="Footer">
+      <font-awesome-icon :icon="['fa', 'check']" style="color: lightgreen;" slot="title"/>
       <mason-footer/>
     </mason-section>
   </article>
@@ -119,11 +156,13 @@ export default {
 }
 </script>
 
-<style scoped>
-.mason-swatch {
-  border-radius: 4px;
-  width: 1em;
-  height: 1em;
-  border: 4px solid transparent;
-}
+<style lang="scss" scoped>
+  @import 'assets/theme/colors';
+
+  .mason-swatch {
+    border-radius: 4px;
+    width: 1em;
+    height: 1em;
+    border: 4px solid transparent;
+  }
 </style>
