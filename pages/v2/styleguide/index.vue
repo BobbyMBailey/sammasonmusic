@@ -150,6 +150,10 @@
       </mason-card>
     </mason-section>
     <hr>
+    <mason-section title="Button">
+      <mason-button label="Button"/>
+      <mason-button label="Material Design" link="https://material.io/guidelines/components/buttons.html" target="_blank"/>
+    </mason-section>
     <mason-section
       id="Organisms"
       title="Organisms">
@@ -179,13 +183,15 @@
 import MasonSection from '~/components/Section.vue'
 import MasonFooter from '~/components/Footer.vue'
 import MasonCard from '~/components/Card.vue'
+import MasonButton from '~/components/Button.vue'
 
 export default {
   layout: 'styleguide',
   components: {
     MasonFooter,
     MasonSection,
-    MasonCard
+    MasonCard,
+    MasonButton
   }
 }
 </script>

@@ -147,9 +147,49 @@
   version "0.0.22"
   resolved "https://registry.yarnpkg.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-0.0.22.tgz#720457bda0e5866265e5e0f8fe4fbd857fa5653f"
 
+"@material/animation@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@material/animation/-/animation-0.34.0.tgz#a99cc9dabf7d0179b4da9a0aaa1575c4d1513823"
+
+"@material/base@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@material/base/-/base-0.34.0.tgz#73f915227f9f0548e24587f502d74c351250224a"
+
+"@material/button@^0.34.1":
+  version "0.34.1"
+  resolved "https://registry.yarnpkg.com/@material/button/-/button-0.34.1.tgz#683fa3ace6a46cb0212c874a500ae9a6315ef9a8"
+  dependencies:
+    "@material/elevation" "^0.34.0"
+    "@material/ripple" "^0.34.1"
+    "@material/rtl" "^0.34.0"
+    "@material/theme" "^0.34.0"
+    "@material/typography" "^0.34.0"
+
+"@material/elevation@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@material/elevation/-/elevation-0.34.0.tgz#8e1e3c9141daab5dcfb444571102df7625293a21"
+  dependencies:
+    "@material/animation" "^0.34.0"
+    "@material/theme" "^0.4.0"
+
+"@material/ripple@^0.34.1":
+  version "0.34.1"
+  resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-0.34.1.tgz#805dc02922ba345304845297c85bf7570434a32c"
+  dependencies:
+    "@material/base" "^0.34.0"
+    "@material/theme" "^0.34.0"
+
+"@material/rtl@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@material/rtl/-/rtl-0.34.0.tgz#6116d9c99f0c0ff40a8ae97ea5bc1a5fd29bcff5"
+
 "@material/theme@^0.34.0":
   version "0.34.0"
   resolved "https://registry.yarnpkg.com/@material/theme/-/theme-0.34.0.tgz#0118b935c2ecbcf3b4a1c84cd949e6344fa8bcb5"
+
+"@material/typography@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@material/typography/-/typography-0.34.0.tgz#cb365ecd2eb0d785410c743ec3426a107a687e3d"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
