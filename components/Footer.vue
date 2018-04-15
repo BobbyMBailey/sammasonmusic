@@ -1,5 +1,5 @@
 <template>
-  <footer class="mason-footer">
+  <footer :class="bem()">
     <social-links :items="socialItems" />
     <span class="mason-typography--fineprint">Sam Mason 2018 &copy;</span>
   </footer>
