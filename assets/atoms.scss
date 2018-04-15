@@ -3,7 +3,7 @@
 
 body,
 html {
-  background-color: rgb(255, 255, 255);
+  background-color: $theme-background-color--primary;
   color: $typography-color--primary;
   font: 100% $font-stack;
   height: 100%;
