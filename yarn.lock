@@ -187,6 +187,10 @@
   version "0.34.0"
   resolved "https://registry.yarnpkg.com/@material/theme/-/theme-0.34.0.tgz#0118b935c2ecbcf3b4a1c84cd949e6344fa8bcb5"
 
+"@material/theme@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@material/theme/-/theme-0.4.0.tgz#0aef1a0279b65c15990584fb8b8eca095c734641"
+
 "@material/typography@^0.34.0":
   version "0.34.0"
   resolved "https://registry.yarnpkg.com/@material/typography/-/typography-0.34.0.tgz#cb365ecd2eb0d785410c743ec3426a107a687e3d"

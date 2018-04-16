@@ -149,11 +149,14 @@
         <p slot="text">Suspendisse euismod nunc</p>
       </mason-card>
     </mason-section>
-    <hr>
     <mason-section title="Button">
       <mason-button label="Button"/>
-      <mason-button label="Material Design" link="https://material.io/guidelines/components/buttons.html" target="_blank"/>
+      <mason-button
+        label="Material Design"
+        link="https://material.io/guidelines/components/buttons.html"
+        target="_blank"/>
     </mason-section>
+    <hr>
     <mason-section
       id="Organisms"
       title="Organisms">
