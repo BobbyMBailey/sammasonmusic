@@ -32,9 +32,27 @@ export default {
   @import '@material/button/mixins';
 
   .mason-button {
-    @extend .mdc-button;
-    @extend .mdc-button--stroked;
+    @include mdc-button-base_;
+    @include mdc-button-corner-radius(2px);
+    @include mdc-button-container-fill-color(transparent);
+    @include mdc-button-ink-color(primary);
+    @include mdc-states(primary);
+    @include mdc-button--stroked_;
     @include mdc-button-stroke-width(1px);
+    @include mdc-button-stroke-color(primary);
+
+    // The icon CSS class overrides styles defined in the .material-icons CSS
+    // class, which is loaded separately so the order of CSS definitions is not
+    // guaranteed. Therefore, increase specifity by nesting this class to ensure
+    // overrides apply.
+    .mdc-button__icon {
+      @include mdc-button__icon_;
+    }
+
+    // stylelint-disable-next-line selector-no-qualifying-type
+    svg.mdc-button__icon {
+      @include mdc-button__icon-svg_;
+    }
   }
 
   // Alternate way and retaining the modifiers. However, for Sam we're probably wanting the default to be "stroked"
@@ -68,5 +86,4 @@ export default {
   .mason-button--dense {
     @include mdc-button--dense_;
   }
-
 </style>
