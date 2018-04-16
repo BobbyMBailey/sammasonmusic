@@ -149,8 +149,11 @@
         <p slot="text">Suspendisse euismod nunc</p>
       </mason-card>
     </mason-section>
-    <mason-section title="Button">
+    <mason-section
+      title="Button"
+      content-modifiers="mason-section__content--column">
       <mason-button label="Button"/>
+      <p/>
       <mason-button
         label="Material Design"
         link="https://material.io/guidelines/components/buttons.html"
@@ -200,8 +203,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import 'assets/theme/colors';
-
   .mason-swatch {
     border-radius: 4px;
     width: 1em;
