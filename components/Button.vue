@@ -31,7 +31,7 @@ export default {
 
   .mason-button {
     align-items: center;
-    border: 1px solid $theme-background-color--primary;
+    border: 1px solid $mason-theme-color--primary;
     border-radius: 2px;
     box-sizing: border-box;
     display: inline-flex;
@@ -46,33 +46,15 @@ export default {
   }
 
   .mason-button:hover {
-    opacity: 0.12;
-    transition-duration: 75ms;
-  }
-
-  .mason-button::before {
-    transition: opacity 15ms linear;
-    z-index: 1;
-  }
-
-  .mason-button::before,
-  .mason-button::after {
-    background-color: $theme-background-color--primary;
-    border-radius: 50%;
-    content: '';
-    height: 200%;
-    left: calc(50% - 100%);
-    pointer-events: none;
-    position: absolute;
-    top: calc(50% - 100%);
-    width: 200%;
-  }
-
-  .mason-button:hover::before {
-    opacity: 0.04;
+    position: relative;
+    top: 1px;
+    background-color: $theme-background-color--tertiary-dark;
+    color: $typography-color--primary-dark;
+    opacity: 0.7;
   }
 
   a {
     color: $typography-color--primary;
   }
+
 </style>
