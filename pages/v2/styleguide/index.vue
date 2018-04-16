@@ -153,7 +153,7 @@
       title="Button"
       content-modifiers="mason-section__content--column">
       <mason-button label="Button"/>
-      <p/>
+      <br>
       <mason-button
         label="Material Design"
         link="https://material.io/guidelines/components/buttons.html"

@@ -31,30 +31,6 @@ export default {
   @import '@material/button/mdc-button';
   @import '@material/button/mixins';
 
-  .mason-button-other {
-    align-items: center;
-    border: 1px solid $mason-theme-color--primary;
-    border-radius: 2px;
-    box-sizing: border-box;
-    display: inline-flex;
-    font-size: 0.875rem;
-    font-weight: 500;
-    height: 36px;
-    justify-content: center;
-    margin: 4px;
-    min-width: 64px;
-    padding: 4px 14px;
-    text-transform: uppercase;
-  }
-
-  .mason-button-other:hover {
-    position: relative;
-    top: 1px;
-    background-color: $theme-background-color--tertiary-dark;
-    color: $typography-color--primary-dark;
-    opacity: 0.7;
-  }
-
   .mason-button {
     @extend .mdc-button;
     @extend .mdc-button--stroked;
