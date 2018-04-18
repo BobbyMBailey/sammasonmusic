@@ -11,6 +11,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "styleguide": "vue-styleguidist server",
+    "styleguide:build": "vue-styleguidist build",
     "test": "yarn lint && yarn test:unit",
     "test:unit": "vue-cli-service test",
     "e2e": "concurrently --success=first --kill-others 'yarn build && yarn start' 'yarn e2e:run' ",
@@ -56,6 +58,7 @@
     "stylelint-processor-html": "^1.0.0",
     "vue-loader": "^14.2.2",
     "vue-style-loader": "^4.1.0",
+    "vue-styleguidist": "^1.7.3",
     "wait-on": "^2.1.0"
   },
   "browserslist": [
