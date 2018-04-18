@@ -3,7 +3,7 @@
 }
 
 .mason-demo-section__content--with-background {
-  background-image: url('../../images/IMG_Sammy_BW5.jpg');
+  background-image: url('../static/images/IMG_Sammy_BW5.JPG');
   background-position: center 25%;
   background-repeat: no-repeat;
   background-size: cover;
