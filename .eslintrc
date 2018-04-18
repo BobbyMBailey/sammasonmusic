@@ -1,8 +1,5 @@
 {
   "root": true,
-  "parserOptions": {
-    "parser": "babel-eslint"
-  },
   // required to lint *.vue files
   "plugins": [
     "vue"
