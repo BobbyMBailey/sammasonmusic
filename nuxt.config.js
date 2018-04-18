@@ -96,16 +96,16 @@ module.exports = {
             exclude: /(node_modules)/
           }
         )
-        const vueLoader = config.module.rules.find((rule) => rule.loader === 'vue-loader')
-        vueLoader.options.loaders.scss = 'vue-style-loader!css-loader!sass-loader?' + JSON.stringify({
-          includePaths: [
-            path.resolve(__dirname), 'node_modules'
-          ],
-          alias: {
-            '@material/': path.resolve('./node_modules/@material')
-          }
-        })
       }
+      const vueLoader = config.module.rules.find((rule) => rule.loader === 'vue-loader')
+      vueLoader.options.loaders.scss = 'vue-style-loader!css-loader!sass-loader?' + JSON.stringify({
+        includePaths: [
+          path.resolve(__dirname), 'node_modules'
+        ],
+        alias: {
+          '@material/': path.resolve('./node_modules/@material')
+        }
+      })
     }
   }
 }
