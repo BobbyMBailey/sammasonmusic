@@ -1,7 +1,17 @@
 {
+  "root": true,
   "env": {
     "mocha": true
   },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "plugins": [],
+  "extends": [
+    "standard"
+  ],
   "rules": {
     "import/no-extraneous-dependencies": "off"
   }
