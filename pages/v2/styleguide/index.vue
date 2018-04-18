@@ -4,7 +4,7 @@
       <font-awesome-icon
         slot="title"
         :icon="['fa', 'check']"
-        style="color: blue;"/>
+        style="color: lightgreen;"/>
       <h2><font-awesome-icon
         :icon="['fa', 'quote-left']"
         class="atom-text-color--tertiary"/></h2>
@@ -149,6 +149,20 @@
         <p slot="text">Suspendisse euismod nunc</p>
       </mason-card>
     </mason-section>
+    <mason-section
+      title="Button"
+      content-modifiers="mason-section__content--column">
+      <font-awesome-icon
+        slot="title"
+        :icon="['fa', 'check']"
+        style="color: lightgreen;"/>
+      <mason-button label="Button"/>
+      <br>
+      <mason-button
+        label="Material Design"
+        link="https://material.io/guidelines/components/buttons.html"
+        target="_blank"/>
+    </mason-section>
     <hr>
     <mason-section
       id="Organisms"
@@ -179,20 +193,20 @@
 import MasonSection from '~/components/Section.vue'
 import MasonFooter from '~/components/Footer.vue'
 import MasonCard from '~/components/Card.vue'
+import MasonButton from '~/components/Button.vue'
 
 export default {
   layout: 'styleguide',
   components: {
     MasonFooter,
     MasonSection,
-    MasonCard
+    MasonCard,
+    MasonButton
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  @import 'assets/theme/colors';
-
   .mason-swatch {
     border-radius: 4px;
     width: 1em;

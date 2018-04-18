@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -79,26 +81,30 @@ module.exports = {
             exclude: /(node_modules)/
           },
           {
-            enforce: 'pre',
-            test: /\.(vue)$/,
-            loader: 'vue-loader',
-            options: {
-              loaders: {
-                scss: 'vue-style-loader!css-loader!sass-loader'
-              },
-              postcss: [
-                require('postcss-cssnext')(),
-                require('postcss-html')()
-              ]
-            }
-          },
-          {
-            enforce: 'pre',
             test: /\.(scss)$/,
-            loader: 'sass-loader',
+            use: [
+              {
+                loader: 'sass-loader',
+                options: {
+                  includePaths: [path.resolve(__dirname, 'node_modules')],
+                  alias: {
+                    '@material/': path.resolve('./node_modules/@material')
+                  }
+                }
+              }
+            ],
             exclude: /(node_modules)/
           }
         )
+        const vueLoader = config.module.rules.find((rule) => rule.loader === 'vue-loader')
+        vueLoader.options.loaders.scss = 'vue-style-loader!css-loader!sass-loader?' + JSON.stringify({
+          includePaths: [
+            path.resolve(__dirname), 'node_modules'
+          ],
+          alias: {
+            '@material/': path.resolve('./node_modules/@material')
+          }
+        })
       }
     }
   }
