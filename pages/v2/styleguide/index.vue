@@ -163,6 +163,9 @@
         link="https://material.io/guidelines/components/buttons.html"
         target="_blank"/>
     </mason-section>
+    <mason-section title="Email Field">
+      <mason-email-text-field/>
+    </mason-section>
     <hr>
     <mason-section
       id="Organisms"
@@ -194,6 +197,7 @@ import MasonSection from '~/components/Section.vue'
 import MasonFooter from '~/components/Footer.vue'
 import MasonCard from '~/components/Card.vue'
 import MasonButton from '~/components/Button.vue'
+import MasonEmailTextField from '~/components/EmailTextField.vue'
 
 export default {
   layout: 'styleguide',
@@ -201,7 +205,8 @@ export default {
     MasonFooter,
     MasonSection,
     MasonCard,
-    MasonButton
+    MasonButton,
+    MasonEmailTextField
   }
 }
 </script>
