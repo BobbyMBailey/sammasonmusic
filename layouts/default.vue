@@ -7,8 +7,14 @@
 
 <script>
 import MasonFooter from '~/components/Footer.vue'
+import StructuredData from '~/utils/structured-mason'
 
 export default {
+  head: {
+    script: [
+      { innerHTML: JSON.stringify(StructuredData.getMusicGroup(), null, 4), type: 'application/ld+json' }
+    ]
+  },
   components: {
     MasonFooter
   }
