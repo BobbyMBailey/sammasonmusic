@@ -36,6 +36,9 @@ module.exports = {
 
   modules: [
     '~/modules/vue-bem',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-12301-2'
+    }],
     ['nuxt-seo-module', {
       baseUrl: 'http://www.sammasonmusic.com',
       noGeneratedSitemapInRobotsTxT: true,
