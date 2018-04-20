@@ -12,8 +12,9 @@ import StructuredData from '~/utils/structured-mason'
 export default {
   head: {
     script: [
-      { innerHTML: JSON.stringify(StructuredData.getMusicGroup(), null, 4), type: 'application/ld+json' }
-    ]
+      { innerHTML: JSON.stringify(StructuredData.getMusicGroup()), type: 'application/ld+json' }
+    ],
+    __dangerouslyDisableSanitizers: ['script']
   },
   components: {
     MasonFooter
