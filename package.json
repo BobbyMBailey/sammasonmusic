@@ -33,7 +33,8 @@
     "nuxt": "^1.0.0",
     "nuxt-fontawesome": "^0.1.3",
     "nuxt-seo-module": "^1.0.0",
-    "vue-bem-cn": "^1.0.0"
+    "vue-bem-cn": "^1.0.0",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-e2e-cypress": "^3.0.0-beta.6",
