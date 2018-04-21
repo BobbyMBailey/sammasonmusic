@@ -186,22 +186,31 @@
         style="color: lightgreen;"/>
       <mason-footer/>
     </mason-section>
+    <mason-section title="Header">
+      <font-awesome-icon
+        slot="title"
+        :icon="['fa', 'check']"
+        style="color: blue;"/>
+      <mason-header/>
+    </mason-section>
   </article>
 </template>
 
 <script>
-import MasonSection from '~/components/Section.vue'
-import MasonFooter from '~/components/Footer.vue'
-import MasonCard from '~/components/Card.vue'
 import MasonButton from '~/components/Button.vue'
+import MasonCard from '~/components/Card.vue'
+import MasonFooter from '~/components/Footer.vue'
+import MasonHeader from '~/components/Header.vue'
+import MasonSection from '~/components/Section.vue'
 
 export default {
   layout: 'styleguide',
   components: {
-    MasonFooter,
-    MasonSection,
+    MasonButton,
     MasonCard,
-    MasonButton
+    MasonFooter,
+    MasonHeader,
+    MasonSection
   }
 }
 </script>

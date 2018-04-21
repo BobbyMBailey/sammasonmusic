@@ -1,0 +1,44 @@
+@import './theme/colors';
+@import '@material/elevation/mixins';
+
+.mason-header {
+  @include mdc-elevation(2);
+
+  align-items: center;
+  background: $theme-background-color--tertiary-dark;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  font-weight: 200;
+  height: 3.4375em;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mason-header__title {
+  color: $typography-color--primary-dark;
+  font-weight: 200;
+  padding-left: 0.8em;
+  white-space: nowrap;
+}
+
+.mason-header__drawer-button {
+  color: $typography-color--primary-dark;
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .mason-header__drawer-button {
+    display: flex;
+    padding-left: 1em;
+  }
+
+  .mason-header .mason-navigation {
+    display: none;
+  }
+
+  .mason-header__title {
+    justify-self: center;
+    margin: auto;
+    padding-left: 0;
+  }
+}
