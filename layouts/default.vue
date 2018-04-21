@@ -1,5 +1,6 @@
 <template>
   <div>
+    <mason-header/>
     <nuxt/>
     <mason-footer/>
   </div>
@@ -7,6 +8,7 @@
 
 <script>
 import MasonFooter from '~/components/Footer.vue'
+import MasonHeader from '~/components/Header.vue'
 import StructuredData from '~/utils/structured-mason'
 
 export default {
@@ -17,20 +19,13 @@ export default {
     __dangerouslyDisableSanitizers: ['script']
   },
   components: {
-    MasonFooter
+    MasonFooter,
+    MasonHeader
   }
 }
 </script>
 
 <style>
-html {
-  box-sizing: border-box;
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  word-spacing: 1px;
-}
-
 *,
 *::before,
 *::after {
