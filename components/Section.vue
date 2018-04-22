@@ -36,9 +36,8 @@ export default {
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding-bottom: 2em;
-    padding-top: 2em;
-    width: 100%;
+    padding: 2em;
+    width: calc(100% - 4em);
   }
 
   .mason-section__content {
