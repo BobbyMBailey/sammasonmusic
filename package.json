@@ -19,8 +19,8 @@
     "e2e:run": "wait-on http://localhost:3000 && vue-cli-service e2e --url=http://localhost:3000/",
     "e2e:stream": "wait-on http://localhost:3000 && vue-cli-service e2e --url=http://localhost:3000/ --record --key 37fded90-79ad-45de-a7ab-d989e2eee7b0",
     "e2e:open": "vue-cli-service e2e:open --url=http://localhost:3000/",
-    "lint": "eslint --ext .js,.vue . && stylelint assets/**/*.scss **/*.vue --syntax scss",
-    "lint:fix": "eslint --fix --ext .js,.vue . && stylelint assets/**/*.scss --syntax scss --fix"
+    "lint": "eslint --ext .js,.vue . && stylelint assets/*.scss assets/*.scss assets/theme/*.scss **/*.vue --syntax scss",
+    "lint:fix": "eslint --fix --ext .js,.vue . && stylelint assets/*.scss assets/theme/*.scss --syntax scss --fix"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.5",
