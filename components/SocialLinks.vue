@@ -30,18 +30,6 @@ export default {
 }
 </script>
 
-<style scoped>
-  .mason-social-links {
-    list-style: none;
-  }
-
-  .mason-social-links__item {
-    display: inline;
-    padding-right: 0.9em;
-    white-space: nowrap;
-  }
-
-  .mason-social-links__icon {
-    color: rgb(128, 128, 128);
-  }
+<style lang="scss" scoped>
+  @import 'assets/SocialLinks';
 </style>

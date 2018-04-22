@@ -1,0 +1,66 @@
+@import './theme/colors';
+@import '@material/elevation/mixins';
+
+.mason-card {
+  @include mdc-elevation(4);
+
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 1em;
+  width: 350px;
+
+  &--full {
+    width: 100%;
+  }
+
+  &--medium {
+    width: 50%;
+  }
+
+  &--small {
+    width: 33%;
+  }
+
+  &__media {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    object-fit: contain;
+    overflow: hidden;
+  }
+
+  &__title {
+    padding: 0 1.1em;
+  }
+
+  &__text {
+    padding-left: 1em;
+  }
+}
+
+@media (max-width: 450px) {
+  .mason-card {
+    margin: 0;
+    max-width: 100%;
+    padding-bottom: 1em;
+    padding-top: 1em;
+
+    &--medium {
+      margin: 0;
+      width: 100%;
+    }
+
+    &--small {
+      margin: 0;
+      width: 100%;
+    }
+
+    &--full {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
