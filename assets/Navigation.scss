@@ -1,0 +1,23 @@
+@import './theme/colors';
+
+.mason-navigation {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: center;
+}
+
+.mason-navigation__list {
+  align-items: center;
+  align-self: flex-end;
+  display: flex;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+}
+
+.mason-navigation__item {
+  display: inline;
+  padding: 0 1.2em;
+}

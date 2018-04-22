@@ -4,7 +4,7 @@
 import StructuredData from './structured'
 
 const defaultMusicGroup = {
-  name: 'Sam Mason Music',
+  name: 'Sam Mason',
   url: 'http://www.sammasonmusic.com',
   description: 'Sam Mason is an alt-country singer/songwriter musical artist from Fort Worth, Texas',
   sameAs: [
