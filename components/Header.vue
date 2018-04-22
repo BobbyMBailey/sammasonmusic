@@ -1,7 +1,7 @@
 <template>
   <header :class="bem()">
     <div :class="bem('drawer-button')">
-      <a><i
+      <a @click="toggleDrawer"><i
         aria-hidden="true"
         class="material-icons">menu</i></a>
     </div>
@@ -12,6 +12,7 @@
 
 <script>
 import MasonNavigation from '~/components/Navigation'
+import { mapMutations } from 'vuex'
 
 export default {
   name: 'Header',
@@ -22,7 +23,8 @@ export default {
     return {
       links: this.$store.state.headerNavigation
     }
-  }
+  },
+  methods: mapMutations(['toggleDrawer'])
 }
 </script>
 
