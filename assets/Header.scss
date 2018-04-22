@@ -32,8 +32,12 @@
     padding-left: 1em;
   }
 
-  .mason-header .mason-navigation {
+  .mason-header .mason-navigation__item {
     display: none;
+  }
+
+  .mason-header .mason-navigation__item.mason-navigation__item--small-screen {
+    display: flex;
   }
 
   .mason-header__title {

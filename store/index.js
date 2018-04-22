@@ -11,7 +11,7 @@ const createStore = () => {
         { label: 'Music', link: '#' },
         { label: 'Press', link: '#' },
         { label: 'Videos', link: '#' },
-        { label: 'Subscribe', link: '#', icon: ['fa', 'envelope'], onlyIcon: true, keepOnSmall: true }
+        { label: 'Subscribe', link: '#', icon: ['fa', 'envelope'], onlyIcon: true, keepOnSmallScreen: true }
       ]
     },
     mutations: {

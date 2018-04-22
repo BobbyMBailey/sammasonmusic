@@ -3,7 +3,7 @@
     <ul :class="bem('list')">
       <li
         v-for="item in items"
-        :class="bem('item')"
+        :class="[bem('item'), item.keepOnSmallScreen ? bem('item') + '--small-screen' : '']"
         :key="item.link">
         <a
           :aria-label="item.label"
@@ -20,7 +20,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'Navigation',
   props: {
