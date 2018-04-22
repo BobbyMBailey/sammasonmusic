@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss">
-   @import 'assets/Header.scss';
+   @import 'assets/Header';
 </style>
 
 <docs>

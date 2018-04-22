@@ -34,29 +34,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import 'assets/theme/colors';
-
-  .mason-navigation {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-
-  .mason-navigation__list {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    align-self: flex-end;
-    list-style: none;
-    height: 100%;
-  }
-
-  .mason-navigation__item {
-    display: inline;
-    padding: 0 1.2em;
-  }
+  @import 'assets/Navigation';
 </style>
 
 <docs>

@@ -38,8 +38,8 @@ describe('Navigation', () => {
         localVue,
         propsData: {
           items: [
-            { label: '-' },
-            { label: '-' }
+            { label: '-', icon: [] },
+            { label: '-', icon: [] }
           ]
         },
         stubs: stubs
