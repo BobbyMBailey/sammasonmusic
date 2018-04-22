@@ -1,20 +1,53 @@
+<!-- Most of this code was directly inspired by https://github.com/matsp/material-components-vue/tree/master/components/textfield -->
 <template>
-  <div class="mason-text-field">
+  <div
+    :class="classes"
+    class="mdc-text-field mdc-text-field--outlined">
+    <div class="mdc-notched-outline">
+      <svg>
+        <path class="mdc-notched-outline__path"/>
+      </svg>
+    </div>
+    <div class="mdc-notched-outline__idle"/>
     <input
-      :placeholder="label"
       :id="id"
-      class="mason-text-field__input"
-      type="email">
+      :value="value"
+      v-bind="$attrs"
+      type="email"
+      class="mdc-text-field__input"
+      @input="onInput"
+    >
     <label
+      :id="id + '-label'"
       :for="id"
-      class="mason-floating-label">{{ label }}</label>
+      class="mdc-floating-label"> {{ label }}
+    </label>
   </div>
 </template>
 
 <script>
+import { MDCTextField } from '@material/textfield/dist/mdc.textfield'
+import debounce from 'lodash.debounce'
+
 export default {
   name: 'EmailTextField',
   props: {
+    value: {
+      type: String,
+      default: ''
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    upgraded: {
+      type: Boolean,
+      default: false
+    },
+    focused: {
+      type: Boolean,
+      default: false
+    },
     label: {
       type: String,
       default: 'Email'
@@ -22,40 +55,36 @@ export default {
   },
   data () {
     return {
-      id: null
+      id: null,
+      mdcTextField: null
+    }
+  },
+  computed: {
+    classes () {
+      return {
+        'mdc-text-field--disabled': this.disabled,
+        'mdc-text-field--upgraded': this.upgraded,
+        'mdc-text-field--focused': this.focused
+      }
     }
   },
   created () {
     this.id = 'EmailTextField-' + Math.random().toString(36).slice(4)
+  },
+  mounted () {
+    this.mdcTextField = MDCTextField.attachTo(this.$el)
+  },
+  beforeDestroy () {
+    this.mdcTextField.destroy()
+  },
+  methods: {
+    onInput (event) {
+      debounce(() => this.$emit('input', event.target.value))
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  @import 'assets/theme/colors';
-  .mason-text-field {
-    height: 200px;
-  }
-
-  .mason-text-field__input {
-    position: relative;
-    top: 4em;
-    left: 5.4px;
-  }
-
-  .mason-floating-label {
-    padding: 5px 5px;
-    display: block;
-  }
-
-  .mason-text-field__input:focus {
-    border-bottom: 1.5px solid black;
-  }
-
-  input {
-    outline: none;
-    border: none;
-    border-bottom: 1px solid black;
-  }
-
+  @import 'assets/EmailTextField';
 </style>
