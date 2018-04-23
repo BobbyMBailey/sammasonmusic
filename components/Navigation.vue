@@ -4,16 +4,17 @@
       <li
         v-for="item in items"
         :class="[bem('item'), item.keepOnSmallScreen ? bem('item') + '--small-screen' : '']"
-        :key="item.link">
+        :key="(item.link ? item.link : '') + (item.label ? item.label : '')">
         <a
           :aria-label="item.label"
           :class="bem('link')"
           :href="item.link"
-          :target="item.target"> {{ item.onlyIcon ? '' : item.label }}
+          :target="item.target">
           <font-awesome-icon
             v-if="item.icon"
             :icon="item.icon"
-            :class="bem('icon')"/></a>
+            :class="bem('icon')"/> {{ item.onlyIcon ? '' : item.label }}
+        </a>
       </li>
     </ul>
   </nav>

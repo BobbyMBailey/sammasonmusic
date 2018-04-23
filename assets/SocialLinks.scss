@@ -1,0 +1,15 @@
+@import 'theme/colors';
+
+.mason-social-links {
+  list-style: none;
+
+  &__item {
+    display: inline;
+    padding-right: 0.9em;
+    white-space: nowrap;
+  }
+
+  &__icon {
+    color: $typography-color--tertiary;
+  }
+}

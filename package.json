@@ -19,18 +19,21 @@
     "e2e:run": "wait-on http://localhost:3000 && vue-cli-service e2e --url=http://localhost:3000/",
     "e2e:stream": "wait-on http://localhost:3000 && vue-cli-service e2e --url=http://localhost:3000/ --record --key 37fded90-79ad-45de-a7ab-d989e2eee7b0",
     "e2e:open": "vue-cli-service e2e:open --url=http://localhost:3000/",
-    "lint": "eslint --ext .js,.vue . && stylelint assets/**/*.scss **/*.vue --syntax scss",
-    "lint:fix": "eslint --fix --ext .js,.vue . && stylelint assets/**/*.scss --syntax scss --fix"
+    "lint": "eslint --ext .js,.vue . && stylelint assets/*.scss assets/*.scss assets/theme/*.scss **/*.vue --syntax scss",
+    "lint:fix": "eslint --fix --ext .js,.vue . && stylelint assets/*.scss assets/theme/*.scss --syntax scss --fix"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.5",
     "@fortawesome/fontawesome-free-brands": "^5.0.9",
+    "@fortawesome/fontawesome-free-regular": "^5.0.10",
     "@fortawesome/fontawesome-free-solid": "^5.0.9",
     "@fortawesome/vue-fontawesome": "^0.0.22",
     "@material/button": "^0.34.1",
+    "@material/drawer": "^0.34.0",
     "@material/elevation": "^0.34.0",
     "@material/floating-label": "^0.34.0",
     "@material/textfield": "^0.34.1",
+    "@material/list": "^0.34.1",
     "@material/theme": "^0.34.0",
     "@nuxtjs/google-analytics": "^2.0.2",
     "lodash.debounce": "^4.0.8",
@@ -55,6 +58,7 @@
     "eslint-loader": "^1.7.1",
     "eslint-plugin-cypress": "^2.0.1",
     "eslint-plugin-vue": "^4.0.0",
+    "lodash.find": "^4.6.0",
     "modularscale-sass": "^3.0.5",
     "node-sass": "^4.8.3",
     "sass-loader": "^7.0.1",
@@ -66,7 +70,8 @@
     "vue-loader": "^14.2.2",
     "vue-style-loader": "^4.1.0",
     "vue-styleguidist": "^1.7.3",
-    "wait-on": "^2.1.0"
+    "wait-on": "^2.1.0",
+    "webpack-merge": "^4.1.2"
   },
   "browserslist": [
     "> 1%",
