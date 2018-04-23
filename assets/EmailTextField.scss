@@ -1,0 +1,38 @@
+@import './theme/colors';
+@import '@material/textfield/mdc-text-field';
+
+.mason-text-field {
+  display: inline-block;
+  position: relative;
+  will-change: opacity, transform, color;
+}
+
+.mason-text-field__input {
+  appearance: none;
+  background: none;
+  border-bottom: 1px solid;
+  border-radius: 0;
+  height: 30px;
+  padding: 20px 0 1px;
+  width: 100%;
+
+  &::placeholder {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  // Remove red outline on firefox
+  &:invalid {
+    box-shadow: none;
+  }
+
+  // Move label when text-field gets autofilled in Chrome
+  // stylelint-disable plugin/selector-bem-pattern
+  &:-webkit-autofill + .mason-floating-label {
+    cursor: auto;
+    transform: translateY(-100%) scale(0.75);
+  }
+}

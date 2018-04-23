@@ -193,6 +193,30 @@
     "@material/animation" "^0.34.0"
     "@material/theme" "^0.4.0"
 
+"@material/floating-label@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@material/floating-label/-/floating-label-0.34.0.tgz#9755a18c26df0f29463df5406037e5218973b7e6"
+  dependencies:
+    "@material/base" "^0.34.0"
+    "@material/rtl" "^0.34.0"
+    "@material/theme" "^0.34.0"
+
+"@material/line-ripple@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@material/line-ripple/-/line-ripple-0.34.0.tgz#6b5048d6573e908a98c9ca69f54e3bdc750a7d0f"
+  dependencies:
+    "@material/animation" "^0.34.0"
+    "@material/base" "^0.34.0"
+    "@material/theme" "^0.34.0"
+
+"@material/notched-outline@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@material/notched-outline/-/notched-outline-0.34.0.tgz#62eee7328764f0b4a8802c009d59b6b48876c18a"
+  dependencies:
+    "@material/animation" "^0.34.0"
+    "@material/base" "^0.34.0"
+    "@material/theme" "^0.34.0"
+    
 "@material/list@^0.34.1":
   version "0.34.1"
   resolved "https://registry.yarnpkg.com/@material/list/-/list-0.34.1.tgz#0c900c69e777a837b7e9d9737345f0bf90aef46a"
@@ -212,6 +236,20 @@
 "@material/rtl@^0.34.0":
   version "0.34.0"
   resolved "https://registry.yarnpkg.com/@material/rtl/-/rtl-0.34.0.tgz#6116d9c99f0c0ff40a8ae97ea5bc1a5fd29bcff5"
+
+"@material/textfield@^0.34.1":
+  version "0.34.1"
+  resolved "https://registry.yarnpkg.com/@material/textfield/-/textfield-0.34.1.tgz#1683d3c6b4ee28c8d52316e7149674b4526dfdd1"
+  dependencies:
+    "@material/animation" "^0.34.0"
+    "@material/base" "^0.34.0"
+    "@material/floating-label" "^0.34.0"
+    "@material/line-ripple" "^0.34.0"
+    "@material/notched-outline" "^0.34.0"
+    "@material/ripple" "^0.34.1"
+    "@material/rtl" "^0.34.0"
+    "@material/theme" "^0.34.0"
+    "@material/typography" "^0.34.0"
 
 "@material/theme@^0.34.0":
   version "0.34.0"
@@ -5696,6 +5734,10 @@ lodash.camelcase@^4.3.0:
 lodash.clonedeep@^4.3.2:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+
+lodash.debounce@^4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
 
 lodash.defaultsdeep@^4.6.0:
   version "4.6.0"
