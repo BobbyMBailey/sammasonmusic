@@ -1,8 +1,8 @@
 import { mount } from 'avoriaz'
 import { expect } from 'chai'
 import { createLocalVue } from '@vue/test-utils'
-import EmailTextField from '../../components/EmailTextField.vue'
-import setupPlugins from './setup/plugins'
+import EmailTextField from '../../../components/EmailTextField.vue'
+import setupPlugins from './_setup/plugins'
 
 describe('EmailTextField', () => {
   let vue
