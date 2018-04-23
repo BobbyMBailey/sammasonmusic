@@ -1,12 +1,14 @@
 <template>
   <div>
     <mason-header/>
+    <mason-drawer v-model="isDrawerOpen"/>
     <nuxt/>
     <mason-footer/>
   </div>
 </template>
 
 <script>
+import MasonDrawer from '~/components/Drawer.vue'
 import MasonFooter from '~/components/Footer.vue'
 import MasonHeader from '~/components/Header.vue'
 import StructuredData from '~/utils/structured-mason'
@@ -19,8 +21,19 @@ export default {
     __dangerouslyDisableSanitizers: ['script']
   },
   components: {
+    MasonDrawer,
     MasonFooter,
     MasonHeader
+  },
+  computed: {
+    isDrawerOpen: {
+      get () {
+        return this.$store.state.isDrawerOpen
+      },
+      set (value) {
+        this.$store.commit('setDrawerOpen', value)
+      }
+    }
   }
 }
 </script>

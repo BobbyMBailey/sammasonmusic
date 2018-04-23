@@ -59,6 +59,9 @@ module.exports = {
           set: '@fortawesome/fontawesome-free-solid'
         },
         {
+          set: '@fortawesome/fontawesome-free-regular'
+        },
+        {
           set: '@fortawesome/fontawesome-free-brands'
         }
       ]
