@@ -5,7 +5,7 @@ const createStore = () => {
     state: {
       isDrawerOpen: false,
       headerNavigation: [
-        { label: 'Home', link: '#' },
+        { label: 'Home', link: '#', icon: ['fa', 'home'] },
         { label: 'Me', link: '#' },
         { label: 'Us', link: '#' },
         { label: 'Music', link: '#' },
@@ -20,6 +20,9 @@ const createStore = () => {
       },
       closeDrawer (state) {
         state.isDrawerOpen = false
+      },
+      setDrawerOpen (state, isOpen) {
+        state.isDrawerOpen = isOpen
       },
       toggleDrawer (state) {
         state.isDrawerOpen = !state.isDrawerOpen
