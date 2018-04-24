@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <main>
     <mason-section
       id="hero"
       :content-modifiers="['center', 'set-height']"
@@ -15,7 +15,7 @@
       <signup/>
     </mason-section>
     <site-progress/>
-  </article>
+  </main>
 </template>
 
 <script>
