@@ -1,5 +1,4 @@
 const path = require('path')
-// const find = require('lodash.find')
 
 module.exports = {
   configureWebpack: config => {
