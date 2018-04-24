@@ -42,6 +42,11 @@ p {
   font-size: $typography-size-fineprint;
 }
 
+.mason-typography--fineprint-dark {
+  color: darken($typography-color--primary-dark, 10%);
+  font-size: $typography-size-fineprint;
+}
+
 /*
 * atoms: text colors
 */
