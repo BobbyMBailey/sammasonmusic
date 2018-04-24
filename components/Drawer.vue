@@ -26,7 +26,7 @@
                   aria-hidden="true"/>
                 <font-awesome-icon
                   v-else
-                  :icon="['far', 'file']"
+                  :icon="['fa', 'star']"
                   class="mdc-list-item__graphic"
                   aria-hidden="true"/>{{ item.label }}
               </a>
