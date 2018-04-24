@@ -2,10 +2,10 @@
 @import '@material/elevation/mixins';
 
 .mason-header {
-  @include mdc-elevation(2);
+  @include mdc-elevation(3);
 
   align-items: center;
-  background: $theme-background-color--tertiary-dark;
+  background: rgba($theme-background-color--tertiary-dark, 0.8);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   font-weight: 200;
