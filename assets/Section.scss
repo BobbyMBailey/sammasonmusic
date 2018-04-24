@@ -4,8 +4,7 @@ $content-max-width: 1080px;
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 2em;
-  width: calc(100% - 4em);
+  width: 100%;
 
   &__content {
     align-items: left;
@@ -15,11 +14,21 @@ $content-max-width: 1080px;
     justify-content: left;
     max-width: $content-max-width;
     overflow: hidden;
+    padding: 2em;
     width: 100%;
   }
 
   &__content--column {
     flex-direction: column;
+  }
+
+  &__content--center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content--set-height {
+    height: 100%;
   }
 
   &__title {

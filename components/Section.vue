@@ -1,9 +1,12 @@
 <template>
-  <section :class="bem()">
+  <section
+    :id="id"
+    :class="bem()"
+    :style="sectionClass">
     <div :class="bem('title')">
-      <h1 :id="id">{{ title }} <slot name="title"/></h1>
+      <h1>{{ title }} <slot name="title"/></h1>
     </div>
-    <div :class="bem('content', contentModifiers)">
+    <div :class="[bem('content'), contentClass]">
       <slot/>
     </div>
   </section>
@@ -22,8 +25,26 @@ export default {
       default: ''
     },
     contentModifiers: {
+      type: Array,
+      default: null
+    },
+    backgroundImage: {
       type: String,
-      default: ''
+      default: null
+    }
+  },
+  computed: {
+    sectionClass: function () {
+      let backgroundImage = !this.backgroundImage ? {} : {
+        backgroundImage: `url(${this.backgroundImage})`
+      }
+      return Object.assign({}, backgroundImage)
+    },
+    contentClass: function () {
+      if (!this.contentModifiers) {
+        return ''
+      }
+      return this.contentModifiers.map((value) => this.bem('content') + '--' + value).join(' ')
     }
   }
 }
