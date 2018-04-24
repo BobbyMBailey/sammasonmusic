@@ -43,8 +43,8 @@
       </div>
     </mason-section>
     <mason-section
-      title="Colors"
-      content-modifiers="mason-section__content--column">
+      :content-modifiers="['column']"
+      title="Colors">
       <font-awesome-icon
         slot="title"
         :icon="['fa', 'check']"
@@ -64,8 +64,8 @@
       <div class="mason-swatch atom-background-color--tertiary-dark"/>
     </mason-section>
     <mason-section
-      title="Colors Typography"
-      content-modifiers="mason-section__content--column">
+      :content-modifiers="['column']"
+      title="Colors Typography">
       <font-awesome-icon
         slot="title"
         :icon="['fa', 'check']"
