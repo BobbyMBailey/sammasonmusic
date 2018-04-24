@@ -1,7 +1,7 @@
 <template>
   <footer :class="bem()">
     <social-links :items="socialItems" />
-    <span class="mason-typography--fineprint">Sam Mason 2018 &copy;</span>
+    <span class="mason-typography--fineprint-dark">Sam Mason 2018 &copy;</span>
   </footer>
 </template>
 
@@ -29,14 +29,6 @@ export default {
 }
 </script>
 
-<style>
-  .mason-footer {
-    bottom: 0;
-    margin: 0 auto;
-    padding-bottom: 1em;
-    padding-top: 1em;
-    position: relative;
-    text-align: center;
-    width: 100%;
-  }
+<style lang="scss">
+  @import 'assets/Footer';
 </style>

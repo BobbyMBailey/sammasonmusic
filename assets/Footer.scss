@@ -1,0 +1,29 @@
+.mason-footer {
+  align-items: center;
+  background-image: url('/v2/images/4987_footer.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  min-height: 120px;
+  padding-bottom: 1em;
+  padding-top: 2em;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 670px) {
+  .mason-footer {
+    background-position-x: 26%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .mason-footer {
+    background-position-y: -60px;
+  }
+}
