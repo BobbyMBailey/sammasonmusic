@@ -3,12 +3,6 @@
   <div
     :class="classes"
     class="mdc-text-field mdc-text-field--outlined">
-    <div class="mdc-notched-outline">
-      <svg>
-        <path class="mdc-notched-outline__path"/>
-      </svg>
-    </div>
-    <div class="mdc-notched-outline__idle"/>
     <input
       :id="id"
       :value="value"
@@ -22,6 +16,12 @@
       :for="id"
       class="mdc-floating-label"> {{ label }}
     </label>
+    <div class="mdc-notched-outline">
+      <svg>
+        <path class="mdc-notched-outline__path"/>
+      </svg>
+    </div>
+    <div class="mdc-notched-outline__idle"/>
   </div>
 </template>
 
@@ -86,5 +86,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '@material/notched-outline/mdc-notched-outline';
   @import 'assets/EmailTextField';
 </style>

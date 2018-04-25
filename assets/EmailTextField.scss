@@ -1,6 +1,10 @@
 @import './theme/colors';
 @import '@material/textfield/mdc-text-field';
 
+.mdc-text-field__input {
+  box-sizing: content-box;
+}
+
 .mason-text-field {
   display: inline-block;
   position: relative;
