@@ -1,7 +1,9 @@
 <template>
   <div :class="bem()">
-    <mason-email-text-field/>
-    <mason-button label="Submit"/>
+    <mason-email-text-field :class="bem('email')"/>
+    <mason-button
+      :class="bem('submit')"
+      label="Submit"/>
   </div>
 </template>
 
@@ -19,5 +21,5 @@ export default {
 </script>
 
 <style lang="scss">
-  /** No style */
+  @import 'assets/Signup';
 </style>
