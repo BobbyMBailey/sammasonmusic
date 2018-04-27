@@ -1,10 +1,16 @@
+$namespace: 'mason';
+$block-name: $namespace + '-section';
 $content-max-width: 1080px;
 
-.mason-section {
+.#{$block-name} {
   display: flex;
   flex-direction: column;
   margin: 0;
   width: 100%;
+
+  img + p {
+    margin-left: 2em;
+  }
 
   &__content {
     align-items: left;
@@ -27,8 +33,20 @@ $content-max-width: 1080px;
     justify-content: center;
   }
 
+  &__content--row-top {
+    align-items: flex-start;
+  }
+
+  &__content--column-top {
+    justify-content: flex-start;
+  }
+
   &__content--set-height {
     height: 100%;
+  }
+
+  &__content--nowrap {
+    flex-wrap: nowrap;
   }
 
   &__title {
@@ -36,6 +54,44 @@ $content-max-width: 1080px;
     display: flex;
     max-width: 1160px;
     padding-bottom: 1em;
-    width: 100%;
+    padding-left: 0;
+    padding-top: 2em;
+  }
+}
+
+@media (min-width: 720px) {
+  .#{$block-name} {
+    &__title {
+      padding-left: 2em;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .#{$block-name} {
+    &__content--mobile-column {
+      flex-direction: column;
+    }
+
+    &__content--mobile-column img {
+      padding-bottom: 1em;
+    }
+
+    &__content--mobile-wrap {
+      flex-wrap: wrap;
+    }
+
+    &__content--mobile-center {
+      align-items: center;
+    }
+
+    img + p {
+      margin-left: 0;
+    }
+
+    &__content--mobile-center p {
+      text-align: center;
+    }
   }
 }

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <mason-header/>
     <mason-drawer v-model="isDrawerOpen"/>
     <nuxt/>
     <mason-footer/>

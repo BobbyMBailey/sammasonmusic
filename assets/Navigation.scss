@@ -2,6 +2,7 @@
 
 .mason-navigation {
   align-items: center;
+  color: $theme-background-color--primary-dark;
   display: flex;
   flex-direction: row;
   height: 100%;
@@ -19,5 +20,14 @@
 
 .mason-navigation__item {
   display: inline;
+  font-weight: 300;
   padding: 0 1.2em;
+}
+
+.mason-navigation__item a {
+  text-decoration-line: none;
+}
+
+.mason-navigation__item a:visited {
+  color: $typography-color--primary-dark;
 }

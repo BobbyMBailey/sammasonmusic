@@ -2,7 +2,7 @@
 <template>
   <div
     :class="classes"
-    class="mdc-text-field mdc-text-field--outlined">
+    class="mason-text-field mdc-text-field mdc-text-field--outlined mason-text-field--input-invert">
     <input
       :id="id"
       :value="value"
@@ -16,12 +16,12 @@
       :for="id"
       class="mdc-floating-label"> {{ label }}
     </label>
-    <div class="mdc-notched-outline">
+    <div class="mdc-notched-outline mason-notched-outline">
       <svg>
         <path class="mdc-notched-outline__path"/>
       </svg>
     </div>
-    <div class="mdc-notched-outline__idle"/>
+    <div class="mdc-notched-outline__idle mason-notched-outline__idle"/>
   </div>
 </template>
 

@@ -4,14 +4,20 @@
 .mason-header {
   @include mdc-elevation(3);
 
-  align-items: center;
   background: $theme-background-color--tertiary-dark;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  font-weight: 200;
-  height: 3.4375em;
-  justify-content: space-between;
+  display: block;
+  position: absolute;
+  top: 0;
   width: 100%;
+  z-index: 8001;
+
+  &--no-background {
+    @include mdc-elevation(0);
+
+    background: none;
+    border-bottom: unset;
+  }
 
   &__title {
     color: $typography-color--primary-dark;
@@ -20,9 +26,22 @@
     white-space: nowrap;
   }
 
+  &__title--smallscreen-only {
+    display: none;
+  }
+
   &__drawer-button {
     color: $typography-color--primary-dark;
     display: none;
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    font-weight: 200;
+    height: 3.4375em;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 
@@ -46,6 +65,28 @@
       margin: auto;
       padding-left: 0;
     }
+
+    &__title--smallscreen-only {
+      display: flex;
+    }
+  }
+}
+
+.mason-header--typography-invert {
+  .mason-navigation__item a {
+    color: $typography-color--primary;
+  }
+
+  .mason-navigation__item a:visited {
+    color: $typography-color--primary;
+  }
+
+  .mason-header__title {
+    color: $typography-color--primary;
+  }
+
+  .mason-header__drawer-button {
+    color: $typography-color--primary;
   }
 }
 

@@ -1,42 +1,16 @@
 @import './theme/colors';
 @import '@material/textfield/mdc-text-field';
+@import '@material/notched-outline/mixins';
 
-.mdc-text-field__input {
-  box-sizing: content-box;
+.mason-text-field.mdc-text-field--outlined {
+  @include mdc-notched-outline-idle-color($mason-theme-color--tertiary);
 }
 
-.mason-text-field {
-  display: inline-block;
-  position: relative;
-  will-change: opacity, transform, color;
+.mason-text-field .mason-notched-outline {
+  @include mdc-notched-outline-color($mason-theme-color--primary);
+  @include mdc-notched-outline-stroke-width(0.5);
 }
 
-.mason-text-field__input {
-  appearance: none;
-  background: none;
-  border-bottom: 1px solid;
-  border-radius: 0;
-  height: 30px;
-  padding: 20px 0 1px;
-  width: 100%;
-
-  &::placeholder {
-    opacity: 1;
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  // Remove red outline on firefox
-  &:invalid {
-    box-shadow: none;
-  }
-
-  // Move label when text-field gets autofilled in Chrome
-  // stylelint-disable plugin/selector-bem-pattern
-  &:-webkit-autofill + .mason-floating-label {
-    cursor: auto;
-    transform: translateY(-100%) scale(0.75);
-  }
+.mason-text-field.mason-text-field--input-invert .mdc-text-field__input {
+  color: $typography-color--primary-dark;
 }
