@@ -13,8 +13,11 @@
 </template>
 
 <script>
+import { default as BEMModifiers, getModifiers } from './mixins/bem-modifiers'
+
 export default {
   name: 'Section',
+  mixins: [BEMModifiers],
   props: {
     id: {
       type: String,
@@ -41,10 +44,7 @@ export default {
       return Object.assign({}, backgroundImage)
     },
     contentClass: function () {
-      if (!this.contentModifiers) {
-        return ''
-      }
-      return this.contentModifiers.map((value) => this.bem('content') + '--' + value).join(' ')
+      return getModifiers(this, 'content')
     }
   }
 }
