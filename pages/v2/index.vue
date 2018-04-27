@@ -6,9 +6,10 @@
       id="hero"
       :content-modifiers="['center', 'set-height', 'column', 'column-top']"
       background-image="/v2/images/4577_full_focus_dark.jpg">
-      <h3>Enter Email for Free Music and Updates</h3>
+      <h3 class="mason-hero-item--mobile-hide">Enter Email for Free Music and Updates</h3>
+      <p class="mason-hero-item--mobile-only">Enter Email for Free Music and Updates</p>
       <a
-        class="atom-text-color--tertiary"
+        class="atom-text-color--tertiary mason-hero-item--mobile-only"
         href="#Subscribe"
         style="margin-top: 0.5em;">
         <font-awesome-icon
@@ -19,7 +20,7 @@
     </mason-section>
     <mason-section
       id="Subscribe"
-      :content-modifiers="['center', 'mobile-wrap', 'mobile-column', 'mobile-center']"
+      :content-modifiers="['center', 'mobile-wrap', 'column', 'mobile-center']"
       title="Subscribe">
       <p>Enter Email for Free Music and Updates</p>
       <signup/>
@@ -65,6 +66,12 @@ export default {
 
     .mason-section__content h1 {
       color: $typography-color--secondary;
+    }
+  }
+
+  @media (min-width: 861px) {
+    .mason-hero-item--mobile-only {
+      display: none;
     }
   }
 

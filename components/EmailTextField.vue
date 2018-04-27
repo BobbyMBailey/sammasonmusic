@@ -2,7 +2,7 @@
 <template>
   <div
     :class="classes"
-    class="mason-text-field mdc-text-field mdc-text-field--outlined mdc-text-field--dense mason-text-field--input-invert">
+    class="mason-text-field mdc-text-field mdc-text-field--outlined mdc-text-field--dense">
     <div class="mason-text-field__background"/>
     <input
       :id="id"
