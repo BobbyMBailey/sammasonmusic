@@ -5,7 +5,8 @@ body,
 html {
   background-color: $theme-background-color--primary;
   color: $typography-color--primary;
-  font: 100% $font-stack;
+  font-family: $font-stack;
+  font-weight: 300;
   height: 100%;
   margin: 0;
   overflow: scroll;
@@ -13,6 +14,7 @@ html {
 
 main {
   min-height: 81.1vh;
+  position: relative;
 }
 
 /*
@@ -20,14 +22,17 @@ main {
 */
 h3 {
   font-size: $typography-size-tertiary;
+  font-weight: 200;
 }
 
 h2 {
   font-size: $typography-size-secondary;
+  font-weight: 400;
 }
 
 h1 {
   font-size: $typography-size-primary;
+  font-weight: 300;
 }
 
 p {
@@ -109,10 +114,5 @@ p {
 * atoms: links
 */
 a {
-  color: invert($typography-color--primary);
   cursor: pointer;
-}
-
-a:link {
-  text-decoration-line: none;
 }
