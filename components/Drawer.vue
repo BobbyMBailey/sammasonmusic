@@ -18,9 +18,10 @@
             <li
               v-for="item in links"
               :key="item.link + item.label">
-              <a
-                class="mdc-list-item atom-text-color--primary"
-                href="#">
+              <nuxt-link
+                :to="item.link"
+                :replace="typeof item.external === 'boolean' ? item.external : true"
+                class="mdc-list-item atom-text-color--primary">
                 <font-awesome-icon
                   v-if="item.icon"
                   :icon="item.icon"
@@ -31,7 +32,7 @@
                   :icon="['fa', 'star']"
                   class="mdc-list-item__graphic"
                   aria-hidden="true"/>{{ item.label }}
-              </a>
+              </nuxt-link>
             </li>
           </ul>
         </nav>
