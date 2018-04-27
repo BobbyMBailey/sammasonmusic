@@ -6,8 +6,13 @@
       id="hero"
       :content-modifiers="['center', 'set-height', 'column', 'column-top']"
       background-image="/v2/images/4577_full_focus_dark.jpg">
-      <h1 style="display:  none;">Sam Mason</h1>
       <h3>Enter Email for Free Music and Updates</h3>
+      <signup/>
+    </mason-section>
+    <mason-section
+      :content-modifiers="['center', 'mobile-wrap', 'mobile-column', 'mobile-center']"
+      title="Subscribe">
+      <p>Enter Email for Free Music and Updates</p>
       <signup/>
     </mason-section>
     <mason-section
@@ -63,6 +68,12 @@ export default {
   @media (min-width: 1300px) {
     .mason-section__content {
       padding-top: 80px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    #hero {
+      background-position-y: 17%;
     }
   }
 

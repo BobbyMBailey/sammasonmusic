@@ -5,16 +5,16 @@
         v-for="item in items"
         :class="[bem('item'), item.keepOnSmallScreen ? bem('item') + '--small-screen' : '']"
         :key="(item.link ? item.link : '') + (item.label ? item.label : '')">
-        <a
+        <nuxt-link
           :aria-label="item.label"
           :class="bem('link')"
-          :href="item.link"
-          :target="item.target">
+          :to="item.link"
+          :replace="typeof item.external === 'boolean' ? item.external : true">
           <font-awesome-icon
             v-if="item.icon"
             :icon="item.icon"
             :class="bem('icon')"/> {{ item.onlyIcon ? '' : item.label }}
-        </a>
+        </nuxt-link>
       </li>
     </ul>
   </nav>

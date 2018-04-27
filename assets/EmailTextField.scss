@@ -11,6 +11,29 @@
   @include mdc-notched-outline-stroke-width(0.5);
 }
 
+.mason-text-field {
+  position: relative;
+
+  .mdc-text-field__input {
+    height: 56px;
+  }
+
+  &__background {
+    align-self: center;
+    background: rgba($theme-background-color--secondary, 0.5);
+    background-position: center;
+    background-size: 100%;
+    border-radius: 4px;
+    display: none;
+    filter: blur(1px);
+    height: 90%;
+    justify-self: center;
+    position: absolute;
+    top: -0.5px;
+    width: 98%;
+  }
+}
+
 .mason-text-field.mason-text-field--input-invert .mdc-text-field__input {
   color: $typography-color--primary-dark;
 }
