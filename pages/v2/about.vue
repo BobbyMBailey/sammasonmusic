@@ -6,6 +6,21 @@
       id="hero"
       background-image="/v2/images/5015.jpg"/>
     <mason-section>
+      <mason-card class="mason-card--medium">
+        <img
+          slot="media"
+          src="http://via.placeholder.com/540x200">
+        <h3 slot="title">Short Version</h3>
+        <p slot="text">
+          I’m a non-touring, folk and alt-country singer/songwriter focused on Christmas music.
+          My birthday falls on Christmas each year and I was born into an affinity for the music that decorates the holiday season.
+          I bring my little piece of country and Texas to the winter season.
+          In a world where musicians are measured by the number of likes on Facebook or the followers on Instagram and not by the quality of their craft, I am navigating the musical industry unconventionally.
+          Consider me a working man’s musician. I work a job 8-5, support my wife and kids, and write music when I can squeeze any ounce of free time from my day.
+          I don’t believe in the millennial ideology that surrounds us that “if you’re not getting ahead, you’re falling behind.”
+          I’m right where I’m supposed to be. Writing songs, recording them, and sharing them with the people around me. With you.
+        </p>
+      </mason-card>
       <mason-card class="mason-card--full">
         <img
           slot="media"
@@ -26,21 +41,6 @@
           This confession is the first note in the melody of our song that is worth of only one.
           A song that flows from the humble, shallow rivers of our soul and meets the deep waters of the gospel.
           I now hope to write from these waters. To make God known and make less my own desire to be known.
-        </p>
-      </mason-card>
-      <mason-card class="mason-card--medium">
-        <img
-          slot="media"
-          src="http://via.placeholder.com/540x200">
-        <h3 slot="title">Short Version</h3>
-        <p slot="text">
-          I’m a non-touring, folk and alt-country singer/songwriter focused on Christmas music.
-          My birthday falls on Christmas each year and I was born into an affinity for the music that decorates the holiday season.
-          I bring my little piece of country and Texas to the winter season.
-          In a world where musicians are measured by the number of likes on Facebook or the followers on Instagram and not by the quality of their craft, I am navigating the musical industry unconventionally.
-          Consider me a working man’s musician. I work a job 8-5, support my wife and kids, and write music when I can squeeze any ounce of free time from my day.
-          I don’t believe in the millennial ideology that surrounds us that “if you’re not getting ahead, you’re falling behind.”
-          I’m right where I’m supposed to be. Writing songs, recording them, and sharing them with the people around me. With you.
         </p>
       </mason-card>
     </mason-section>
@@ -75,5 +75,11 @@ export default {
 
   .mason-card--medium {
     width: 70%;
+  }
+
+  @media (max-width: 890px) {
+    #hero {
+      background-position-x: center;
+    }
   }
 </style>
