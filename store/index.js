@@ -9,7 +9,7 @@ const createStore = () => {
         { label: 'About', link: '/v2/about' },
         { label: 'Us', link: '#' },
         { label: 'Music', link: '#' },
-        { label: 'Press', link: '#' },
+        { label: 'Press', link: '/v2/press' },
         { label: 'Videos', link: '#' },
         { label: 'Subscribe', link: '#', icon: ['fa', 'envelope'], onlyIcon: true, keepOnSmallScreen: true }
       ]
