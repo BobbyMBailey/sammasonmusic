@@ -7,9 +7,18 @@
       :content-modifiers="['center', 'set-height', 'column', 'column-top']"
       background-image="/v2/images/4577_full_focus_dark.jpg">
       <h3>Enter Email for Free Music and Updates</h3>
-      <signup/>
+      <a
+        class="atom-text-color--tertiary"
+        href="#Subscribe"
+        style="margin-top: 0.5em;">
+        <font-awesome-icon
+          :icon="['far', 'arrow-alt-circle-down']"
+          size="2x"/>
+      </a>
+      <signup class="mason-hero-item--mobile-hide"/>
     </mason-section>
     <mason-section
+      id="Subscribe"
       :content-modifiers="['center', 'mobile-wrap', 'mobile-column', 'mobile-center']"
       title="Subscribe">
       <p>Enter Email for Free Music and Updates</p>
@@ -62,6 +71,10 @@ export default {
   @media (max-width: 860px) {
     #hero {
       background-position-x: 72%;
+    }
+
+    #hero .mason-hero-item--mobile-hide {
+      display: none;
     }
   }
 

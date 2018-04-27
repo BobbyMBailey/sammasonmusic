@@ -1,5 +1,7 @@
 <template>
   <main>
+    <mason-header
+      :block-modifiers="['no-background', 'typography-invert', 'smallscreen-only']"/>
     <mason-section
       id="hero"
       background-image="/v2/images/5015.jpg"/>
@@ -46,13 +48,15 @@
 </template>
 
 <script>
-import MasonSection from '~/components/Section.vue'
 import MasonCard from '~/components/Card.vue'
+import MasonHeader from '~/components/Header.vue'
+import MasonSection from '~/components/Section.vue'
 
 export default {
   name: 'About',
   components: {
     MasonCard,
+    MasonHeader,
     MasonSection
   }
 }
@@ -72,5 +76,4 @@ export default {
   .mason-card--medium {
     width: 70%;
   }
-
 </style>
