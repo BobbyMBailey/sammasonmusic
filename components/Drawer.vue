@@ -42,6 +42,7 @@
 import { MDCTemporaryDrawer } from '@material/drawer/dist/mdc.drawer'
 
 export default {
+  name: 'Drawer',
   model: {
     prop: 'open',
     event: 'change'
