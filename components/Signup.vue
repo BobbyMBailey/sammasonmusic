@@ -3,7 +3,7 @@
     <mason-email-text-field :class="bem('email')"/>
     <mason-button
       :class="bem('submit')"
-      label="Submit"/>
+      label="Subscribe"/>
   </div>
 </template>
 
