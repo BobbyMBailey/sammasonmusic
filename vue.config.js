@@ -10,7 +10,8 @@ module.exports = {
         path.resolve(__dirname), 'node_modules'
       ],
       alias: {
-        '@material/': path.resolve('./node_modules/@material')
+        '~/': path.resolve(__dirname),
+        '@material/': path.resolve(__dirname, 'node_modules/@material')
       }
     })
   }
