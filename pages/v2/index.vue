@@ -1,120 +1,103 @@
 <template>
-  <section class="container">
-    <div>
-      <h1 class="title">
-        Sam Mason Music
-      </h1>
-      <h2 class="subtitle">
-        Progress
-      </h2>
-      <div class="links">
-        <nuxt-link
-          to="/v2/styleguide"
-          class="button--green"
-          replace>StyleGuide Molecules</nuxt-link>
-        <nuxt-link
-          to="/v2/styleguide#Organisms"
-          class="button--blue"
-          replace>StyleGuide Organisms</nuxt-link>
-        <div class="button--disabled">Home</div>
-        <div class="button--disabled">About Me</div>
-        <div class="button--disabled">Music</div>
-        <div class="button--disabled">Media</div>
-        <div class="button--disabled">Press</div>
-        <div class="button--disabled">Subscribe</div>
-        <div class="button--disabled">Contact</div>
-      </div>
-    </div>
-  </section>
+  <main>
+    <mason-header
+      :block-modifiers="['no-background', 'typography-invert', 'smallscreen-only']"/>
+    <mason-section
+      id="hero"
+      :content-modifiers="['center', 'set-height', 'column', 'column-top']"
+      background-image="/v2/images/4577_full_focus_dark.jpg">
+      <h3 class="mason-hero-item--mobile-hide">Enter Email for Free Music and Updates</h3>
+      <p class="mason-hero-item--mobile-only">Enter Email for Free Music and Updates</p>
+      <a
+        class="atom-text-color--tertiary mason-hero-item--mobile-only"
+        href="#Subscribe"
+        style="margin-top: 0.5em;">
+        <font-awesome-icon
+          :icon="['far', 'arrow-alt-circle-down']"
+          size="2x"/>
+      </a>
+      <signup class="mason-hero-item--mobile-hide"/>
+    </mason-section>
+    <mason-section
+      id="Subscribe"
+      :content-modifiers="['center', 'mobile-wrap', 'column', 'mobile-center']"
+      title="Subscribe">
+      <p>Enter Email for Free Music and Updates</p>
+      <signup/>
+    </mason-section>
+    <mason-section
+      :content-modifiers="['nowrap', 'mobile-wrap', 'mobile-column', 'mobile-center']"
+      title="Updates">
+      <img src="~/assets/images/album_givemeasign.jpg">
+      <p>My alt-country album, <i>Give Me a Sign</i>, is still available for download via
+        <a
+          class="atom-text-color--primary"
+          href="https://noisetrade.com/sammasonmusic/give-me-a-sign"
+          target="_blank">NoiseTrade</a>!
+        <br>
+        Connect with me on social media using the links below!</p>
+    </mason-section>
+  </main>
 </template>
 
-<style scoped>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<script>
+import MasonHeader from '~/components/Header.vue'
+import MasonSection from '~/components/Section.vue'
+import Signup from '~/components/Signup.vue'
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+export default {
+  name: 'Home',
+  components: {
+    MasonHeader,
+    MasonSection,
+    Signup
+  }
 }
+</script>
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+<style lang="scss">
+  @import 'assets/theme/colors';
+  @import '@material/elevation/mixins';
 
-.links {
-  padding-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1080px;
-}
+  #hero {
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
 
-.links a:first-child {
-  margin-right: 1em;
-  margin-top: 15px;
-}
+    .mason-section__content h1 {
+      color: $typography-color--secondary;
+    }
+  }
 
-.links .button--green,
-.links .button--blue,
-.links .button--disabled {
-  margin-top: 15px;
-}
+  @media (min-width: 861px) {
+    .mason-hero-item--mobile-only {
+      display: none;
+    }
+  }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+  @media (max-width: 860px) {
+    #hero {
+      background-position-x: 72%;
+    }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+    #hero .mason-hero-item--mobile-hide {
+      display: none;
+    }
+  }
 
-.button--blue {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #0002ff;
-  color: #0002ff;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+  @media (min-width: 1300px) {
+    .mason-section__content {
+      padding-top: 80px;
+    }
+  }
 
-.button--blue:hover {
-  color: #fff;
-  background-color: #62a4ff;
-  border-color: #62a4ff;
-}
+  @media (min-width: 1200px) {
+    #hero {
+      background-position-y: 17%;
+    }
+  }
 
-.button--disabled {
-  cursor: default;
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--disabled:hover {
-  color: #35495e;
-  background-color: white;
-}
+  .mason-footer {
+    background-image: url('/v2/images/4577_footer.jpg') !important;
+  }
 </style>

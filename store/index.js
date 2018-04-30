@@ -5,8 +5,8 @@ const createStore = () => {
     state: {
       isDrawerOpen: false,
       headerNavigation: [
-        { label: 'Home', link: '#', icon: ['fa', 'home'] },
-        { label: 'Me', link: '#' },
+        { label: 'Home', link: '/v2', icon: ['fa', 'home'] },
+        { label: 'About', link: '/v2/about' },
         { label: 'Us', link: '#' },
         { label: 'Music', link: '#' },
         { label: 'Press', link: '#' },

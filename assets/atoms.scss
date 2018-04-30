@@ -5,10 +5,37 @@ body,
 html {
   background-color: $theme-background-color--primary;
   color: $typography-color--primary;
-  font: 100% $font-stack;
-  height: 100%;
-  margin: 0;
+  font-family: $font-stack;
+  font-weight: 300;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  touch-action: manipulation;
+}
+
+/**
+ * Reset
+ */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/**
+ * Reset
+ */
+body {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+/**
+ * Reset
+ */
+main {
+  display: block;
+  min-height: 81.1vh;
+  position: relative;
 }
 
 /*
@@ -16,14 +43,17 @@ html {
 */
 h3 {
   font-size: $typography-size-tertiary;
+  font-weight: 300;
 }
 
 h2 {
   font-size: $typography-size-secondary;
+  font-weight: 300;
 }
 
 h1 {
   font-size: $typography-size-primary;
+  font-weight: 300;
 }
 
 p {
@@ -39,6 +69,11 @@ p {
 /* Typography: fine print */
 .mason-typography--fineprint {
   color: $typography-color--tertiary;
+  font-size: $typography-size-fineprint;
+}
+
+.mason-typography--fineprint-dark {
+  color: darken($typography-color--primary-dark, 10%);
   font-size: $typography-size-fineprint;
 }
 
@@ -100,10 +135,5 @@ p {
 * atoms: links
 */
 a {
-  color: invert($typography-color--primary);
   cursor: pointer;
-}
-
-a:link {
-  text-decoration-line: none;
 }

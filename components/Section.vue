@@ -1,17 +1,23 @@
 <template>
-  <section :class="bem()">
+  <section
+    :id="id"
+    :class="bem()"
+    :style="sectionClass">
     <div :class="bem('title')">
-      <h1 :id="id">{{ title }} <slot name="title"/></h1>
+      <h1>{{ title }} <slot name="title"/></h1>
     </div>
-    <div :class="bem('content', contentModifiers)">
+    <div :class="[bem('content'), contentClass]">
       <slot/>
     </div>
   </section>
 </template>
 
 <script>
+import { default as BEMModifiers, getModifiers } from './mixins/bem-modifiers'
+
 export default {
   name: 'Section',
+  mixins: [BEMModifiers],
   props: {
     id: {
       type: String,
@@ -22,8 +28,23 @@ export default {
       default: ''
     },
     contentModifiers: {
+      type: Array,
+      default: null
+    },
+    backgroundImage: {
       type: String,
-      default: ''
+      default: null
+    }
+  },
+  computed: {
+    sectionClass: function () {
+      let backgroundImage = !this.backgroundImage ? {} : {
+        backgroundImage: `url(${this.backgroundImage})`
+      }
+      return Object.assign({}, backgroundImage)
+    },
+    contentClass: function () {
+      return getModifiers(this, 'content')
     }
   }
 }
@@ -32,3 +53,11 @@ export default {
 <style lang="scss" scoped>
   @import 'assets/Section';
 </style>
+
+<docs>
+  # TODO
+  * Consider using `<img>` tag for background image within a new element and with a style of `{ position: absolute; top: 0; bottom: 0; left: 0; }`
+  ```jsx
+  <Section/>
+  ```
+</docs>

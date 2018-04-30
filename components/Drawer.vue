@@ -4,7 +4,9 @@
     class="mdc-drawer mdc-drawer--temporary"
     @MDCTemporaryDrawer:close="model = false">
     <nav class="mdc-drawer__drawer">
-      <header class="mdc-drawer__header">
+      <header
+        class="mdc-drawer__header"
+        style="display: none;">
         <div class="mdc-drawer__header-content">
           <h2>Sam Mason</h2>
         </div>
@@ -16,9 +18,10 @@
             <li
               v-for="item in links"
               :key="item.link + item.label">
-              <a
-                class="mdc-list-item atom-text-color--primary"
-                href="#">
+              <nuxt-link
+                :to="item.link"
+                :replace="typeof item.external === 'boolean' ? item.external : true"
+                class="mdc-list-item atom-text-color--primary">
                 <font-awesome-icon
                   v-if="item.icon"
                   :icon="item.icon"
@@ -26,10 +29,10 @@
                   aria-hidden="true"/>
                 <font-awesome-icon
                   v-else
-                  :icon="['far', 'file']"
+                  :icon="['fa', 'star']"
                   class="mdc-list-item__graphic"
                   aria-hidden="true"/>{{ item.label }}
-              </a>
+              </nuxt-link>
             </li>
           </ul>
         </nav>
@@ -42,6 +45,7 @@
 import { MDCTemporaryDrawer } from '@material/drawer/dist/mdc.drawer'
 
 export default {
+  name: 'Drawer',
   model: {
     prop: 'open',
     event: 'change'

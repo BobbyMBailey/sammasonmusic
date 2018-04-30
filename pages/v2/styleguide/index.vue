@@ -17,8 +17,8 @@
       <p class="mason-typography--fineprint">Brad Frost</p>
     </mason-section>
     <mason-section
-      title="Typography"
-      content-modifiers="mason-section__content--column">
+      :content-modifiers="['column']"
+      title="Typography">
       <font-awesome-icon
         slot="title"
         :icon="['fa', 'check']"
@@ -43,8 +43,8 @@
       </div>
     </mason-section>
     <mason-section
-      title="Colors"
-      content-modifiers="mason-section__content--column">
+      :content-modifiers="['column']"
+      title="Colors">
       <font-awesome-icon
         slot="title"
         :icon="['fa', 'check']"
@@ -64,8 +64,8 @@
       <div class="mason-swatch atom-background-color--tertiary-dark"/>
     </mason-section>
     <mason-section
-      title="Colors Typography"
-      content-modifiers="mason-section__content--column">
+      :content-modifiers="['column']"
+      title="Colors Typography">
       <font-awesome-icon
         slot="title"
         :icon="['fa', 'check']"
@@ -94,8 +94,8 @@
       <p>Nullam et odio quam. Aenean interdum, nisl vitae dapibus tempor</p>
     </mason-section>
     <mason-section
-      title="Section as Column"
-      content-modifiers="mason-section__content--column">
+      :content-modifiers="['column']"
+      title="Section as Column">
       <font-awesome-icon
         slot="title"
         :icon="['fa', 'check']"
@@ -150,8 +150,8 @@
       </mason-card>
     </mason-section>
     <mason-section
-      title="Button"
-      content-modifiers="mason-section__content--column">
+      :content-modifiers="['column']"
+      title="Button">
       <font-awesome-icon
         slot="title"
         :icon="['fa', 'check']"

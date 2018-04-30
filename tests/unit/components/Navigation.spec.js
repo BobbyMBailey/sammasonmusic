@@ -20,8 +20,8 @@ describe('Navigation', () => {
         localVue,
         propsData: {
           items: [
-            { label: '-' },
-            { label: '-' }
+            { label: 'A' },
+            { label: 'B' }
           ]
         },
         stubs: stubs
@@ -38,8 +38,8 @@ describe('Navigation', () => {
         localVue,
         propsData: {
           items: [
-            { label: '-', icon: [] },
-            { label: '-', icon: [] }
+            { label: 'A', icon: [] },
+            { label: 'B', icon: [] }
           ]
         },
         stubs: stubs
@@ -84,7 +84,7 @@ describe('Navigation', () => {
       let item = list.at(0)
       expect(item.attributes()).to.have.property('href', '#')
       item = list.at(1)
-      expect(item.attributes()).to.have.property('href', 'home.html')
+      expect(item.attributes()).to.have.property('to', 'home.html')
     })
 
     it('setting onlyIcon sets the aria-label but no text is displayed', () => {

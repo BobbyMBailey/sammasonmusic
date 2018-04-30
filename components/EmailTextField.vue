@@ -2,13 +2,8 @@
 <template>
   <div
     :class="classes"
-    class="mdc-text-field mdc-text-field--outlined">
-    <div class="mdc-notched-outline">
-      <svg>
-        <path class="mdc-notched-outline__path"/>
-      </svg>
-    </div>
-    <div class="mdc-notched-outline__idle"/>
+    class="mason-text-field mdc-text-field mdc-text-field--outlined mdc-text-field--dense">
+    <div class="mason-text-field__background"/>
     <input
       :id="id"
       :value="value"
@@ -22,6 +17,12 @@
       :for="id"
       class="mdc-floating-label"> {{ label }}
     </label>
+    <div class="mdc-notched-outline mason-notched-outline">
+      <svg>
+        <path class="mdc-notched-outline__path"/>
+      </svg>
+    </div>
+    <div class="mdc-notched-outline__idle mason-notched-outline__idle"/>
   </div>
 </template>
 
@@ -79,12 +80,13 @@ export default {
   },
   methods: {
     onInput (event) {
-      debounce(() => this.$emit('input', event.target.value))
+      debounce(() => this.$emit('input', event.target.value))()
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+  @import '@material/notched-outline/mdc-notched-outline';
   @import 'assets/EmailTextField';
 </style>
