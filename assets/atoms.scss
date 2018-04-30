@@ -7,12 +7,33 @@ html {
   color: $typography-color--primary;
   font-family: $font-stack;
   font-weight: 300;
-  height: 100%;
-  margin: 0;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  touch-action: manipulation;
 }
 
+/**
+ * Reset
+ */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/**
+ * Reset
+ */
+body {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+/**
+ * Reset
+ */
 main {
+  display: block;
   min-height: 81.1vh;
   position: relative;
 }
