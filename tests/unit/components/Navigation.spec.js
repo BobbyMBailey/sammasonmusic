@@ -82,7 +82,7 @@ describe('Navigation', () => {
       })
       let list = wrapper.findAll(`.${projectNamespace}-navigation__link`)
       let item = list.at(0)
-      expect(item.attributes()).to.have.property('to', '#')
+      expect(item.attributes()).to.have.property('href', '#')
       item = list.at(1)
       expect(item.attributes()).to.have.property('to', 'home.html')
     })
