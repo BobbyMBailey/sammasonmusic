@@ -1,7 +1,10 @@
 @import './theme/colors';
 @import '@material/elevation/mixins';
 
-.mason-card {
+$namespace: 'mason';
+$block-name: $namespace + '-card';
+
+.#{$block-name} {
   @include mdc-elevation(4);
 
   border-radius: 2px;
@@ -65,6 +68,59 @@
     &--full {
       margin: 0;
       width: 100%;
+    }
+  }
+}
+
+/**
+ * The following is mostly taken from https://codemyui.com/pure-css-material-quotation-cards/
+ */
+.#{$block-name}--quote {
+  overflow: hidden;
+  padding: 3em;
+  position: relative;
+
+  .#{$block-name}__text {
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .#{$block-name}__cite {
+    display: block;
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 10px;
+    opacity: 0.8;
+  }
+
+  &::before {
+    color: rgba($typography-color--secondary, 0.2);
+    content: '“';
+    font-family: Georgia, serif;
+    font-size: 5em;
+    font-weight: normal;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+  }
+
+  &::after {
+    bottom: -110px;
+    color: rgba($typography-color--secondary, 0.05);
+    content: '”';
+    font-family: Georgia, serif;
+    font-size: 25em;
+    font-weight: normal;
+    line-height: 100px;
+    position: absolute;
+    right: -32px;
+  }
+
+  @media (max-width: 640px) {
+    &::after {
+      font-size: 22em;
+      right: -25px;
     }
   }
 }
