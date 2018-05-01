@@ -11,7 +11,7 @@
           :class="bem('link')"
           :href="item.link">
           <font-awesome-icon
-            v-if="item.icon"
+            v-if="item.icon && !item.drawerIconOnly"
             :icon="item.icon"
             :class="bem('icon')"/> {{ item.onlyIcon ? '' : item.label }}
         </a>
@@ -22,7 +22,7 @@
           :to="item.link"
           :replace="typeof item.external === 'boolean' ? item.external : true">
           <font-awesome-icon
-            v-if="item.icon"
+            v-if="item.icon && !item.drawerIconOnly"
             :icon="item.icon"
             :class="bem('icon')"/> {{ item.onlyIcon ? '' : item.label }}
         </nuxt-link>
