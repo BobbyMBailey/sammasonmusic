@@ -1,0 +1,45 @@
+@import 'theme/colors';
+@import '@material/elevation/mixins';
+
+$namespace: 'mason';
+$block-name: $namespace + '-contact';
+
+.#{$block-name} {
+  @include mdc-elevation(4);
+
+  align-items: center;
+  background-color: $theme-background-color--primary;
+  display: flex;
+  justify-content: space-around;
+  padding: 2em 1em;
+  width: 100%;
+
+  .mason-social-links {
+    padding-top: 1em;
+  }
+
+  &__info {
+    height: 100%;
+  }
+
+  &__info-icon {
+    font-size: 120px;
+  }
+
+  h3 {
+    padding-bottom: 0.2em;
+    padding-top: 1.5em;
+  }
+
+  h3:first-child {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .#{$block-name} {
+    &__info {
+      display: none;
+    }
+  }
+}

@@ -12,4 +12,8 @@
   &__icon {
     color: $typography-color--primary-dark;
   }
+
+  &--typography-invert &__icon {
+    color: $typography-color--secondary;
+  }
 }

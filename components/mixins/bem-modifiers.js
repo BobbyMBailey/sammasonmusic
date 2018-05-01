@@ -3,7 +3,7 @@ export function getModifiers (component, element) {
   if (!array) {
     return ''
   }
-  return array.map((value) => component.bem(element) + '--' + value).join(' ')
+  return array.filter(value => value ? value.length > 0 : false).map((value) => component.bem(element) + '--' + value).join(' ')
 }
 
 export default {

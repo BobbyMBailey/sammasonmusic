@@ -4,8 +4,7 @@
 .mason-header {
   @include mdc-elevation(3);
 
-  background: $theme-background-color--tertiary-dark;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: $theme-background-color--secondary-dark;
   display: block;
   position: absolute;
   top: 0;
@@ -17,6 +16,16 @@
 
     background: none;
     border-bottom: unset;
+  }
+
+  &--transparent-background {
+    @include mdc-elevation(2);
+
+    background: rgba($theme-background-color--secondary, 0.75);
+  }
+
+  &--pushdown {
+    position: relative;
   }
 
   &__title {

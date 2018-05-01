@@ -80,7 +80,7 @@ export default {
   },
   methods: {
     onInput (event) {
-      debounce(() => this.$emit('input', event.target.value))
+      debounce(() => this.$emit('input', event.target.value))()
     }
   }
 }

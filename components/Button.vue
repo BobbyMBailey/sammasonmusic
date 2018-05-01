@@ -1,9 +1,10 @@
 <template>
-  <a
+  <button
     :class="bem()"
-    :href="link"
-    :target="target">{{ label }}
-  </a>
+    :target="target"
+    :type="type"
+    @click="onClick">{{ label }}
+  </button>
 </template>
 
 <script>
@@ -21,6 +22,15 @@ export default {
     target: {
       type: String,
       default: ''
+    },
+    type: {
+      type: String,
+      default: null
+    }
+  },
+  methods: {
+    onClick (event) {
+      this.$emit('click', event)
     }
   }
 }

@@ -1,11 +1,12 @@
 <template>
   <main>
-    <mason-header
-      :block-modifiers="['no-background', 'typography-invert', 'smallscreen-only']"/>
+    <mason-header :block-modifiers="['transparent-background', 'typography-invert', 'smallscreen-only']"/>
     <mason-section
       id="hero"
       background-image="/v2/images/5015.jpg"/>
-    <mason-section title="Short Version">
+    <mason-section
+      id="ShortVersion"
+      title="Short Version">
       <p>
         I’m a non-touring, folk and alt-country singer/songwriter focused on Christmas music.
         My birthday falls on Christmas each year and I was born into an affinity for the music that decorates the holiday season.
@@ -16,11 +17,12 @@
         I’m right where I’m supposed to be. Writing songs, recording them, and sharing them with the people around me. With you.
       </p>
     </mason-section>
-    <mason-section>
-      <img
-        src="http://via.placeholder.com/1300x150">
-    </mason-section>
-    <mason-section title="Long Version">
+    <mason-section
+      id="image"
+      background-image="/v2/images/4987_about.jpg"/>
+    <mason-section
+      id="LongVersion"
+      title="Long Version">
       <p>
         I am a folk and alt-country singer/songwriter from Texas with a wife who was born in Mexico.
         We have a son who is a red-headed, half-mexican, spanish-speaking boy who occupies a majority of our heart space.
@@ -44,6 +46,7 @@
 <script>
 import MasonCard from '~/components/Card.vue'
 import MasonHeader from '~/components/Header.vue'
+import MasonNavigation from '~/components/Navigation.vue'
 import MasonSection from '~/components/Section.vue'
 
 export default {
@@ -51,6 +54,7 @@ export default {
   components: {
     MasonCard,
     MasonHeader,
+    MasonNavigation,
     MasonSection
   }
 }
@@ -63,17 +67,19 @@ export default {
     background-repeat: no-repeat;
   }
 
-  .mason-section {
-    display: flex;
-  }
-
-  .mason-card--medium {
-    width: 70%;
-  }
+ #image {
+   height: 180px;
+ }
 
   @media (max-width: 890px) {
     #hero {
       background-position-x: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #image {
+      background-position-x: 10%;
     }
   }
 </style>
