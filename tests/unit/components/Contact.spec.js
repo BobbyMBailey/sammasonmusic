@@ -32,7 +32,7 @@ describe('Contact', () => {
       })
       expect(wrapper.contains(`.${blockNamespace}-${blockName}`)).equal(true, 'contains Block')
       expect(wrapper.contains(`.${blockNamespace}-${blockName}__info`)).equal(true, 'contains Info Element')
-      expect(wrapper.contains(`.${blockNamespace}-${blockName}__info_icon`)).equal(true, 'contains Info Icon Element')
+      expect(wrapper.contains(`.${blockNamespace}-${blockName}__info-icon`)).equal(true, 'contains Info Icon Element')
       expect(wrapper.contains(`.${blockNamespace}-${blockName}__links`)).equal(true, 'contains Links Element')
     })
   })
