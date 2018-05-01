@@ -24,6 +24,10 @@
     background: rgba($theme-background-color--secondary, 0.75);
   }
 
+  &--background-invert {
+    background: $theme-background-color--primary;
+  }
+
   &--pushdown {
     position: relative;
   }
