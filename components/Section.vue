@@ -3,7 +3,9 @@
     :id="id"
     :class="bem()"
     :style="sectionClass">
-    <div :class="bem('title')">
+    <div
+      v-if="hasSlot('title')"
+      :class="bem('title')">
       <h1>{{ title }} <slot name="title"/></h1>
     </div>
     <div :class="[bem('content'), contentClass]">
@@ -45,6 +47,11 @@ export default {
     },
     contentClass: function () {
       return getModifiers(this, 'content')
+    }
+  },
+  methods: {
+    hasSlot: function (name = 'default') {
+      return !!this.$slots[ name ] || !!this.$scopedSlots[ name ]
     }
   }
 }
