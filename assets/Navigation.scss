@@ -30,6 +30,7 @@ $block-name: $namespace + '-navigation';
   }
 
   &__item a {
+    color: $typography-color--primary-dark;
     text-decoration-line: none;
   }
 
