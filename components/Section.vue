@@ -4,7 +4,7 @@
     :class="bem()"
     :style="sectionClass">
     <div
-      v-if="hasSlot('title')"
+      v-if="hasSlot('title') || !!title"
       :class="bem('title')">
       <h1>{{ title }} <slot name="title"/></h1>
     </div>
