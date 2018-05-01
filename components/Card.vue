@@ -6,7 +6,7 @@
       <slot name="media"/>
     </div>
     <div
-      :v-if="hasSlot('title')"
+      v-if="hasSlot('title')"
       :class="bem('title')">
       <slot name="title"/>
     </div>

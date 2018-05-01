@@ -64,6 +64,10 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
 
+    .mason-section__content {
+      padding-top: 80px;
+    }
+
     .mason-section__content h1 {
       color: $typography-color--secondary;
     }
