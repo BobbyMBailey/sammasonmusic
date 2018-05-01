@@ -1,5 +1,5 @@
 <template>
-  <ul :class="bem()">
+  <ul :class="[bem(), blockClass]">
     <li
       v-for="item in items"
       :class="bem('item')"
@@ -17,8 +17,15 @@
 </template>
 
 <script>
+import BEMModifiers from './mixins/bem-modifiers'
+import SocialLinks from '~/components/SocialLinks.vue'
+
 export default {
   name: 'SocialLinks',
+  components: {
+    SocialLinks
+  },
+  mixins: [BEMModifiers],
   props: {
     items: {
       type: Array,
