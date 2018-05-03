@@ -1,0 +1,36 @@
+/**
+ * Currently, this is a crude grid
+ */
+.mason-grid {
+  &__cell-half {
+    width: calc(50% - 1em);
+  }
+
+  &__cell-full {
+    width: 100%;
+  }
+}
+
+@media (min-width: 461px) and (max-width: 860px) {
+  .mason-grid {
+    &__cell-half--tablet {
+      width: calc(50% - 1em);
+    }
+
+    &__cell-full--tablet {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .mason-grid {
+    &__cell-half--mobile {
+      width: calc(50% - 1em);
+    }
+
+    &__cell-full--mobile {
+      width: 100%;
+    }
+  }
+}

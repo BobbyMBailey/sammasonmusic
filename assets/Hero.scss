@@ -1,0 +1,24 @@
+$namespace: 'mason';
+$block-name: $namespace + '-hero';
+
+.#{$block-name} {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+
+  .mason-section__content {
+    padding-top: 80px;
+  }
+}
+
+@media (min-width: 861px) {
+  .#{$block-name} .#{$block-name}__item--mobile-only {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .#{$block-name} .#{$block-name}__item--mobile-hide {
+    display: none;
+  }
+}

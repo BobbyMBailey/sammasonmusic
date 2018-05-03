@@ -7,9 +7,8 @@ const createStore = () => {
       headerNavigation: [
         { label: 'Home', link: '/v2', icon: ['fa', 'home'] },
         { label: 'About', link: '/v2/about', icon: ['fa', 'user'], drawerIconOnly: true },
-        { label: 'Music', link: '#', icon: ['fa', 'music'], drawerIconOnly: true },
+        { label: 'Music', link: '/v2/music', icon: ['fa', 'music'], drawerIconOnly: true },
         { label: 'Press', link: '/v2/press', icon: ['fa', 'newspaper'], drawerIconOnly: true },
-        { label: 'Videos', link: '#', icon: ['fab', 'youtube'], drawerIconOnly: true },
         { label: 'Contact', link: '/v2/contact', icon: ['fa', 'comments'], drawerIconOnly: true },
         { label: 'Subscribe', link: '/v2/subscribe', icon: ['fa', 'envelope'], onlyIcon: true, keepOnSmallScreen: true }
       ],
