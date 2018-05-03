@@ -10,7 +10,7 @@
       <h3 class="mason-hero__item--mobile-hide">Enter Email for Free Music and Updates</h3>
       <p class="mason-hero__item--mobile-only">Enter Email for Free Music and Updates</p>
       <a
-        class="atom-text-color--tertiary mason-hero-item--mobile-only"
+        class="atom-text-color--tertiary mason-hero__item--mobile-only"
         href="#Subscribe"
         style="margin-top: 0.5em;">
         <font-awesome-icon
@@ -25,18 +25,6 @@
       title="Subscribe">
       <p>Enter Email for Free Music and Updates</p>
       <signup/>
-    </mason-section>
-    <mason-section
-      :content-modifiers="['nowrap', 'mobile-wrap', 'mobile-column', 'mobile-center']"
-      title="Updates">
-      <img src="~/assets/images/album_givemeasign.jpg">
-      <p>My alt-country album, <i>Give Me a Sign</i>, is still available for download via
-        <a
-          class="atom-text-color--primary"
-          href="https://noisetrade.com/sammasonmusic/give-me-a-sign"
-          target="_blank">NoiseTrade</a>!
-        <br>
-        Connect with me on social media using the links below!</p>
     </mason-section>
   </main>
 </template>
@@ -58,7 +46,6 @@ export default {
 
 <style lang="scss">
   @import 'assets/theme/colors';
-  @import 'assets/Hero';
 
   #hero {
     .mason-section__content {
@@ -91,4 +78,6 @@ export default {
   .mason-footer {
     background-image: url('/v2/images/4577_footer.jpg') !important;
   }
+
+  @import 'assets/Hero';
 </style>

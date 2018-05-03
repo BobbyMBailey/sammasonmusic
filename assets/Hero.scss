@@ -12,13 +12,13 @@ $block-name: $namespace + '-hero';
 }
 
 @media (min-width: 861px) {
-  .#{$block-name}__item--mobile-only {
+  .#{$block-name} .#{$block-name}__item--mobile-only {
     display: none;
   }
 }
 
 @media (max-width: 860px) {
-  .#{$block-name}__item--mobile-hide {
+  .#{$block-name} .#{$block-name}__item--mobile-hide {
     display: none;
   }
 }
