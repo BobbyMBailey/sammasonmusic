@@ -5,9 +5,10 @@
     <mason-section
       id="hero"
       :content-modifiers="['center', 'set-height', 'column', 'column-top']"
+      class="mason-hero"
       background-image="/v2/images/4577_full_focus_dark.jpg">
-      <h3 class="mason-hero-item--mobile-hide">Enter Email for Free Music and Updates</h3>
-      <p class="mason-hero-item--mobile-only">Enter Email for Free Music and Updates</p>
+      <h3 class="mason-hero__item--mobile-hide">Enter Email for Free Music and Updates</h3>
+      <p class="mason-hero__item--mobile-only">Enter Email for Free Music and Updates</p>
       <a
         class="atom-text-color--tertiary mason-hero-item--mobile-only"
         href="#Subscribe"
@@ -16,7 +17,7 @@
           :icon="['far', 'arrow-alt-circle-down']"
           size="2x"/>
       </a>
-      <signup class="mason-hero-item--mobile-hide"/>
+      <signup class="mason-hero__item--mobile-hide"/>
     </mason-section>
     <mason-section
       id="Subscribe"
@@ -57,13 +58,9 @@ export default {
 
 <style lang="scss">
   @import 'assets/theme/colors';
-  @import '@material/elevation/mixins';
+  @import 'assets/Hero';
 
   #hero {
-    height: 600px;
-    background-size: cover;
-    background-repeat: no-repeat;
-
     .mason-section__content {
       padding-top: 80px;
     }
@@ -73,19 +70,9 @@ export default {
     }
   }
 
-  @media (min-width: 861px) {
-    .mason-hero-item--mobile-only {
-      display: none;
-    }
-  }
-
   @media (max-width: 860px) {
     #hero {
       background-position-x: 72%;
-    }
-
-    #hero .mason-hero-item--mobile-hide {
-      display: none;
     }
   }
 
