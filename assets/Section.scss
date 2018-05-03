@@ -51,6 +51,14 @@ $content-max-width: 1080px;
     flex-wrap: nowrap;
   }
 
+  &__content--no-bottom-space {
+    padding-bottom: 0;
+  }
+
+  &__content--space-between {
+    justify-content: space-between;
+  }
+
   &__title {
     align-self: center;
     display: flex;
