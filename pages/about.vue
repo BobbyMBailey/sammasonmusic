@@ -53,15 +53,16 @@ export default {
 
 <style lang="scss" scoped>
   @import 'assets/Grid';
- #hero {
-    height: 750px;
-    background-size: cover;
+
+  #hero {
     background-repeat: no-repeat;
+    background-size: cover;
+    height: 750px;
   }
 
- #image {
-   height: 180px;
- }
+  #image {
+    height: 180px;
+  }
 
   @media (max-width: 890px) {
     #hero {

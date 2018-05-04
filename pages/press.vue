@@ -74,14 +74,14 @@ export default {
 
 <style lang="scss" scoped>
   #hero {
-    height: 600px;
     background-position-x: center;
+    height: 600px;
   }
 
   @media (max-width: 460px) {
     #hero {
-      height: 380px;
       background-position-x: 90%;
+      height: 380px;
     }
   }
 </style>
