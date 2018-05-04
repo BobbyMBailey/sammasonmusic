@@ -9,9 +9,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Sam Mason Music' },
-      /** Eventually this will move just to the StyleGuide layout as https://github.com/nuxt/nuxt.js/issues/3036 */
-      { hid: 'robots', name: 'robots', content: 'noindex' }
+      { hid: 'description', name: 'description', content: 'Sam Mason Music' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -40,16 +38,16 @@ module.exports = {
       id: 'UA-39633531-1'
     }],
     ['nuxt-seo-module', {
-      baseUrl: 'http://www.sammasonmusic.com',
+      baseUrl: 'https://www.sammasonmusic.com',
       noGeneratedSitemapInRobotsTxT: true,
       sitemap: [{
         generate: true,
-        baseUrl: 'http://www.sammasonmusic.com',
-        path: 'sitemap.v2.xml'
+        baseUrl: 'https://www.sammasonmusic.com',
+        path: 'sitemap.xml'
       }],
       robots: {
         UserAgent: '*',
-        Disallow: '/v2',
+        Disallow: '/styleguide',
         Sitemap: 'sitemap.xml'
       }
     }],

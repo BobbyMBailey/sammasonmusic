@@ -15,6 +15,7 @@
     "styleguide:build": "vue-styleguidist build",
     "test": "yarn lint && yarn test:unit",
     "test:unit": "vue-cli-service test",
+    "test:e2e": "yarn e2e",
     "e2e": "concurrently --success=first --kill-others 'yarn build && yarn start' 'yarn e2e:run' ",
     "e2e:run": "wait-on http://localhost:3000 && vue-cli-service e2e --url=http://localhost:3000/",
     "e2e:stream": "wait-on http://localhost:3000 && vue-cli-service e2e --url=http://localhost:3000/ --record --key 37fded90-79ad-45de-a7ab-d989e2eee7b0",
