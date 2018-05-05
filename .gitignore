@@ -449,3 +449,7 @@ jspm_packages/
 # Nuxt build
 .nuxt
 static/robots.txt
+
+# Audit Reports
+.lighthouse
+.yellowlabtools
