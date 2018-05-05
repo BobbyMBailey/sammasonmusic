@@ -7,9 +7,11 @@
       :content-modifiers="['center', 'set-height', 'column', 'column-top']"
       class="mason-hero"
       background-image="/images/4577_full_focus_dark.jpg">
-      <h3 class="mason-hero__item--mobile-hide">Enter Email for Free Music and Updates</h3>
-      <p class="mason-hero__item--mobile-only">Enter Email for Free Music and Updates</p>
+      <p
+        aria-hidden="true"
+        class="mason-hero__item--mobile-only">Enter Email for Free Music and Updates</p>
       <a
+        aria-hidden="true"
         class="atom-text-color--tertiary mason-hero__item--mobile-only"
         href="#Subscribe"
         style="margin-top: 0.5em;">
@@ -17,6 +19,7 @@
           :icon="['far', 'arrow-alt-circle-down']"
           size="2x"/>
       </a>
+      <h3 class="mason-hero__item--mobile-hide">Enter Email for Free Music and Updates</h3>
       <signup class="mason-hero__item--mobile-hide"/>
     </mason-section>
     <mason-section

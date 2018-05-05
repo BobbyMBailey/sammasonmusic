@@ -7,6 +7,7 @@
     <input
       :id="id"
       :value="value"
+      :aria-label="label"
       v-bind="$attrs"
       type="email"
       class="mdc-text-field__input"
