@@ -7,7 +7,8 @@
       <a
         :href="item.link"
         :aria-label="item.label"
-        target="_blank">
+        target="_blank"
+        rel="noopener">
         <font-awesome-icon
           :icon="['fab', item.icon]"
           :class="bem('icon')"/>

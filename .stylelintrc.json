@@ -5,6 +5,7 @@
   ],
   "processors": ["stylelint-processor-html"],
   "rules": {
-    "selector-class-pattern": null
+    "selector-class-pattern": null,
+    "selector-max-id": 1
   }
 }

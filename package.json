@@ -15,12 +15,18 @@
     "styleguide:build": "vue-styleguidist build",
     "test": "yarn lint && yarn test:unit",
     "test:unit": "vue-cli-service test",
+    "test:e2e": "yarn e2e",
     "e2e": "concurrently --success=first --kill-others 'yarn build && yarn start' 'yarn e2e:run' ",
     "e2e:run": "wait-on http://localhost:3000 && vue-cli-service e2e --url=http://localhost:3000/",
     "e2e:stream": "wait-on http://localhost:3000 && vue-cli-service e2e --url=http://localhost:3000/ --record --key 37fded90-79ad-45de-a7ab-d989e2eee7b0",
     "e2e:open": "vue-cli-service e2e:open --url=http://localhost:3000/",
     "lint": "eslint --ext .js,.vue . && stylelint assets/*.scss assets/*.scss assets/theme/*.scss **/*.vue --syntax scss",
-    "lint:fix": "eslint --fix --ext .js,.vue . && stylelint assets/*.scss assets/theme/*.scss --syntax scss --fix"
+    "lint:fix": "eslint --fix --ext .js,.vue . && stylelint assets/*.scss assets/theme/*.scss --syntax scss --fix",
+    "audit": "concurrently --success=first --kill-others 'yarn build && yarn start' 'yarn audit:run-lighthouse' 'yarn audit:run-yellow' ",
+    "audit:lighthouse": "concurrently --success=first --kill-others 'yarn build && yarn start' 'yarn audit:run' ",
+    "audit:yellow": "concurrently --success=first --kill-others 'yarn build && yarn start' 'yarn audit:run-yellow' ",
+    "audit:run-lighthouse": "mkdir -p .lighthouse && wait-on http://localhost:3000 && lighthouse http://localhost:3000/ --view --output-path=./.lighthouse/report.html",
+    "audit:run-yellow": "mkdir -p .yellowlabtools && wait-on http://localhost:3000 && yellowlabtools http://localhost:3000/ > ./.yellowlabtools/report.json"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.5",
@@ -58,6 +64,7 @@
     "eslint-loader": "^1.7.1",
     "eslint-plugin-cypress": "^2.0.1",
     "eslint-plugin-vue": "^4.0.0",
+    "lighthouse": "^2.9.4",
     "modularscale-sass": "^3.0.5",
     "node-sass": "^4.8.3",
     "sass-loader": "^7.0.1",
@@ -70,7 +77,8 @@
     "vue-style-loader": "^4.1.0",
     "vue-styleguidist": "^1.7.3",
     "wait-on": "^2.1.0",
-    "webpack-merge": "^4.1.2"
+    "webpack-merge": "^4.1.2",
+    "yellowlabtools": "^1.13.2"
   },
   "browserslist": [
     "> 1%",

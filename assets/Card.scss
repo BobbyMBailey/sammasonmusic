@@ -15,6 +15,11 @@ $block-name: $namespace + '-card';
   margin: 1em;
   width: 350px;
 
+  &--content-center {
+    justify-content: center;
+    text-align: center;
+  }
+
   &--full {
     width: 100%;
   }

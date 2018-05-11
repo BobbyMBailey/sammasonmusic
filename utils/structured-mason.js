@@ -5,8 +5,13 @@ import StructuredData from './structured'
 
 const defaultMusicGroup = {
   name: 'Sam Mason',
-  url: 'http://www.sammasonmusic.com',
+  url: 'https://www.sammasonmusic.com',
   description: 'Sam Mason is an alt-country singer/songwriter musical artist from Fort Worth, Texas',
+  image: [
+    'https://www.sammasonmusic.com/images/sam-mason-promo-photo-1.jpg',
+    'https://www.sammasonmusic.com/images/sam-mason-promo-photo-2.jpg',
+    'https://www.sammasonmusic.com/images/sam-mason-promo-photo-3.jpg'
+  ],
   sameAs: [
     'http://www.facebook.com/sammasonmusic',
     'https://www.instagram.com/sammasonmusic',

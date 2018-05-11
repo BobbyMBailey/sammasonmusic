@@ -6,7 +6,14 @@
 
 <script>
 export default {
-  name: 'Styleguide'
+  name: 'Styleguide',
+  head () {
+    return {
+      meta: [
+        { hid: 'robots', name: 'robots', content: 'noindex' }
+      ]
+    }
+  }
 }
 </script>
 

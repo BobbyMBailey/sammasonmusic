@@ -6,16 +6,17 @@ module.exports = {
   */
   head: {
     title: 'Sam Mason Music',
+    htmlAttrs: {
+      lang: 'en'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Sam Mason Music' },
-      /** Eventually this will move just to the StyleGuide layout as https://github.com/nuxt/nuxt.js/issues/3036 */
-      { hid: 'robots', name: 'robots', content: 'noindex' }
+      { hid: 'description', name: 'description', content: 'Sam Mason Music' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Material+Icons' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Material+Icons' }
     ]
   },
 
@@ -40,16 +41,16 @@ module.exports = {
       id: 'UA-39633531-1'
     }],
     ['nuxt-seo-module', {
-      baseUrl: 'http://www.sammasonmusic.com',
+      baseUrl: 'https://www.sammasonmusic.com',
       noGeneratedSitemapInRobotsTxT: true,
       sitemap: [{
         generate: true,
-        baseUrl: 'http://www.sammasonmusic.com',
-        path: 'sitemap.v2.xml'
+        baseUrl: 'https://www.sammasonmusic.com',
+        path: 'sitemap.xml'
       }],
       robots: {
         UserAgent: '*',
-        Disallow: '/v2',
+        Disallow: '/styleguide',
         Sitemap: 'sitemap.xml'
       }
     }],
