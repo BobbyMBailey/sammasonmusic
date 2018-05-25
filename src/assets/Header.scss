@@ -1,0 +1,117 @@
+@import 'theme/colors';
+@import '@material/elevation/mixins';
+
+.mason-header {
+  @include mdc-elevation(3);
+
+  background: $theme-background-color--secondary-dark;
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 8001;
+
+  &--no-background {
+    @include mdc-elevation(0);
+
+    background: none;
+    border-bottom: unset;
+  }
+
+  &--transparent-background {
+    @include mdc-elevation(2);
+
+    background: rgba($theme-background-color--secondary, 0.75);
+  }
+
+  &--background-invert {
+    background: $theme-background-color--primary;
+  }
+
+  &--pushdown {
+    position: relative;
+  }
+
+  &__title {
+    color: $typography-color--primary-dark;
+    font-weight: 300;
+    padding-left: 0.8em;
+    white-space: nowrap;
+  }
+
+  &__title--smallscreen-only {
+    display: none;
+  }
+
+  &__drawer-button {
+    color: $typography-color--primary-dark;
+    display: none;
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    font-weight: 200;
+    height: 3.4375em;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (max-width: 860px) {
+  .mason-header {
+    &__drawer-button {
+      display: flex;
+      padding-left: 1em;
+    }
+
+    .mason-navigation__item {
+      display: none;
+    }
+
+    .mason-navigation__item.mason-navigation__item--small-screen {
+      display: flex;
+    }
+
+    &__title {
+      justify-self: center;
+      margin: auto;
+      padding-left: 0;
+    }
+
+    &__title--smallscreen-only {
+      display: flex;
+    }
+  }
+}
+
+.mason-header--typography-invert {
+  .mason-navigation__item a {
+    color: $typography-color--primary;
+  }
+
+  .mason-navigation__item a:visited {
+    color: $typography-color--primary;
+  }
+
+  .mason-header__title {
+    color: $typography-color--primary;
+  }
+
+  .mason-header__drawer-button {
+    color: $typography-color--primary;
+  }
+}
+
+@media (max-width: 425px) {
+  .mason-header {
+    &__drawer-button {
+      display: flex;
+      padding-left: 0.5em;
+    }
+
+    .mason-navigation__list {
+      padding: 0;
+    }
+  }
+}

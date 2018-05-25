@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import { createLocalVue, shallow } from '@vue/test-utils'
-import Navigation from '../../../components/Navigation.vue'
+import Navigation from '../../../src/components/Navigation.vue'
 import setupPlugins from './_setup/plugins'
 
 describe('Navigation', () => {

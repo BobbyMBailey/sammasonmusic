@@ -1,0 +1,23 @@
+$mason-theme-color--primary: rgb(0, 0, 0);
+$mason-theme-color--secondary: lighten($mason-theme-color--primary, 25%);
+$mason-theme-color--tertiary: lighten($mason-theme-color--primary, 50%);
+
+$typography-color--primary: $mason-theme-color--primary;
+$typography-color--secondary: $mason-theme-color--secondary;
+$typography-color--tertiary: $mason-theme-color--tertiary;
+$typography-color--primary-dark: invert($mason-theme-color--primary);
+$typography-color--secondary-dark: invert($mason-theme-color--secondary);
+$typography-color--tertiary-dark: invert($mason-theme-color--tertiary);
+
+$theme-background-color--primary: invert($typography-color--primary);
+$theme-background-color--secondary: invert($typography-color--secondary);
+$theme-background-color--tertiary: invert($typography-color--tertiary);
+$theme-background-color--primary-dark: invert($typography-color--primary-dark);
+$theme-background-color--secondary-dark: invert($typography-color--secondary-dark);
+$theme-background-color--tertiary-dark: invert($typography-color--tertiary-dark);
+
+$mdc-theme-primary: $mason-theme-color--primary;
+$mdc-theme-secondary: $mason-theme-color--secondary;
+$mdc-theme-background: $theme-background-color--primary;
+
+@import '../../../node_modules/@material/theme/mdc-theme';

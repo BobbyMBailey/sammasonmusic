@@ -3,9 +3,10 @@
     "stylelint-config-standard",
     "stylelint-config-sass-guidelines"
   ],
-  "processors": ["stylelint-processor-html"],
+  "processors": [],
   "rules": {
     "selector-class-pattern": null,
-    "selector-max-id": 1
+    "selector-max-id": 1,
+    "no-empty-source": null
   }
 }

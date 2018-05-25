@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import { createLocalVue, shallow } from '@vue/test-utils'
 import Vuex from 'vuex'
-import ComponentUnderTest from '../../../components/Contact.vue'
+import ComponentUnderTest from '../../../src/components/Contact.vue'
 import setupPlugins from './_setup/plugins'
 
 describe('Contact', () => {

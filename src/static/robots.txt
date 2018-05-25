@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /styleguide
+Sitemap: https://www.sammasonmusic.com/sitemap.xml

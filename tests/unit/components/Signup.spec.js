@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import { createLocalVue, shallow } from '@vue/test-utils'
-import ComponentUnderTest from '../../../components/Signup.vue'
+import ComponentUnderTest from '../../../src/components/Signup.vue'
 import setupPlugins from './_setup/plugins'
 
 describe('Signup', () => {
