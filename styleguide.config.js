@@ -17,7 +17,14 @@ rules.push({
   loaders: [
     'style-loader',
     'css-loader',
-    'sass-loader'
+    {
+      loader: 'sass-loader',
+      options: {
+        includePaths: [
+          resolve(__dirname, 'src')
+        ]
+      }
+    }
   ]
 })
 
@@ -32,11 +39,25 @@ const generateCSSLoaders = loaders => {
 }
 
 module.exports = {
+  assetsDir: 'src/assets',
+  styleguideDir: 'dist/styleguide',
   components: 'src/components/**/*.vue',
+  sections: [
+    {
+      name: 'Atoms',
+      content: 'docs/atoms.md',
+      components: 'styleguidist/atoms/*.vue'
+    },
+    {
+      name: 'Components',
+      content: 'docs/molecules_organisms.md',
+      components: 'src/components/**/*.vue'
+    }
+  ],
   require: [
     join(__dirname, 'src/plugins/vue-bem.js'),
     join(__dirname, 'styleguidist/index.js'),
-    join(__dirname, 'styleguidist/overrides.css')
+    join(__dirname, 'styleguidist/override.css')
   ],
   template: {
     head: {
@@ -69,6 +90,6 @@ module.exports = {
     loaders.scss = generateCSSLoaders(loaders.scss)
     return webpackConfig
   },
-  showUsage: true,
-  showCode: true
+  showUsage: false,
+  showCode: false
 }

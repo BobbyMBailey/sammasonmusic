@@ -1,5 +1,4 @@
 const path = require('path')
-const StylelintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
   /*
@@ -74,11 +73,6 @@ module.exports = {
     ** Run ESLint on save
     */
     extend (config, { isDev, isClient }) {
-      config.plugins.push(
-        new StylelintPlugin({
-          files: ['src/**/*.vue']
-        })
-      )
       if (isDev && isClient) {
         // https://github.com/vuejs/vue/tree/dev/dist
         config.resolve.alias['vue$'] = 'vue/dist/vue.esm.js'
