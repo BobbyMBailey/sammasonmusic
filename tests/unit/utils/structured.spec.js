@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import StructuredData from '../../../utils/structured'
+import StructuredData from '../../../src/utils/structured'
 
 describe('Rich Card Structured Data util', () => {
   describe('getTypeEntryPoint', () => {
