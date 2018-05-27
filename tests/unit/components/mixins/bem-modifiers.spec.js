@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import {getModifiers} from '../../../../components/mixins/bem-modifiers'
+import {getModifiers} from '../../../../src/components/mixins/bem-modifiers'
 
 describe('BEM Modifiers Mixin', () => {
   const bemMock = (value) => 'testing' + (value.length > 0 ? '__' + value : '')

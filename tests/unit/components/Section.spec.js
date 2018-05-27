@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import { createLocalVue, shallow } from '@vue/test-utils'
-import Section from '../../../components/Section.vue'
+import Section from '../../../src/components/Section.vue'
 import setupPlugins from './_setup/plugins'
 
 describe('Section', () => {
