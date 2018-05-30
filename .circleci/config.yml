@@ -17,32 +17,39 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
 
       - run: yarn install
 
       - save_cache:
+          key: v1-dependencies-{{ checksum "package.json" }}
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
 
   test:
-      working_directory: ~/repo
+    working_directory: ~/repo
 
-      docker:
-        - image: circleci/node:8.10
-      steps:
-        - checkout
+    docker:
+      - image: circleci/node:8.10
 
-        - run:
-            name: Test
-            command: yarn test
+    steps:
+      - checkout
 
-        - run:
-            name: Generate code coverage
-            command: bash <(curl -s https://codecov.io/bash)
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run:
+          name: Test
+          command: yarn test
+
+      - run:
+          name: Generate code coverage
+          command: bash <(curl -s https://codecov.io/bash)
 
 workflows:
   version: 2
