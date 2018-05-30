@@ -1,7 +1,8 @@
 import { expect } from 'chai'
-import { createLocalVue, shallow } from '@vue/test-utils'
+import { createLocalVue, shallow, mount } from '@vue/test-utils'
 import Navigation from '../../../src/components/Navigation.vue'
 import setupPlugins from './_setup/plugins'
+import setupRouter from './_setup/router'
 
 describe('Navigation', () => {
   let localVue
@@ -18,6 +19,7 @@ describe('Navigation', () => {
     it('provides a list of li tags under a ul', () => {
       const wrapper = shallow(Navigation, {
         localVue,
+        router: setupRouter(localVue).router,
         propsData: {
           items: [
             { label: 'A' },
@@ -36,10 +38,11 @@ describe('Navigation', () => {
     it(`using namespace of ${projectNamespace}`, () => {
       const wrapper = shallow(Navigation, {
         localVue,
+        router: setupRouter(localVue).router,
         propsData: {
           items: [
             { label: 'A', icon: [] },
-            { label: 'B', icon: [] }
+            { label: 'B', icon: [], link: '#' }
           ]
         },
         stubs: stubs
@@ -56,13 +59,14 @@ describe('Navigation', () => {
     it('renders label', () => {
       const wrapper = shallow(Navigation, {
         localVue,
+        router: setupRouter(localVue).router,
         propsData: {
           items: [
             { label: 'Home' },
             { label: 'About' }
           ]
         },
-        stubs: stubs
+        stubs: Object.assign({'router-link': '<div/>'}, stubs)
       })
       let list = wrapper.findAll(`.${projectNamespace}-navigation__item`)
       expect(list.at(0).text()).to.include('Home')
@@ -70,8 +74,9 @@ describe('Navigation', () => {
     })
 
     it('sets link', () => {
-      const wrapper = shallow(Navigation, {
+      const wrapper = mount(Navigation, {
         localVue,
+        router: setupRouter(localVue, ['home.html']).router,
         propsData: {
           items: [
             { link: '#' },
@@ -90,6 +95,7 @@ describe('Navigation', () => {
     it('setting onlyIcon sets the aria-label but no text is displayed', () => {
       const wrapper = shallow(Navigation, {
         localVue,
+        router: setupRouter(localVue).router,
         propsData: {
           items: [
             { label: 'Home' },

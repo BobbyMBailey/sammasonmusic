@@ -22,8 +22,7 @@ describe('Contact', () => {
   describe('BEM', () => {
     it(`using namespace of ${blockNamespace}`, () => {
       let store = new Vuex.Store({
-        state: {
-        }
+        state: {}
       })
       const wrapper = shallow(ComponentUnderTest, {
         localVue,

@@ -3,6 +3,7 @@ import { createLocalVue, shallow } from '@vue/test-utils'
 import Vuex from 'vuex'
 import ComponentUnderTest from '../../../src/components/Drawer.vue'
 import setupPlugins from './_setup/plugins'
+import setupRouter from './_setup/router'
 
 describe('Drawer', () => {
   let localVue
@@ -20,12 +21,16 @@ describe('Drawer', () => {
     it('provides a list of li tags under a ul', () => {
       let store = new Vuex.Store({
         state: {
-          headerNavigation: [{label: 'Home', link: '#'}, {label: 'About', link: 'about.html'}]
+          headerNavigation: [
+            {label: 'Home', link: '#'},
+            {label: 'About', link: 'about.html'}
+          ]
         }
       })
 
       const wrapper = shallow(ComponentUnderTest, {
         localVue,
+        router: setupRouter(localVue, ['about.html']).router,
         store,
         stubs: stubs
       })
@@ -44,6 +49,7 @@ describe('Drawer', () => {
       })
       const wrapper = shallow(ComponentUnderTest, {
         localVue,
+        router: setupRouter(localVue),
         store,
         stubs: stubs
       })

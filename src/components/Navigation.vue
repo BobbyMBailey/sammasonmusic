@@ -6,17 +6,17 @@
         :class="[bem('item'), item.keepOnSmallScreen ? bem('item') + '--small-screen' : '']"
         :key="(item.link ? item.link : '') + (item.label ? item.label : '')">
         <a
-          v-if="item.link && item.link.indexOf('#') === 0"
+          v-if="!item.link || (item.link.indexOf('#') === 0 || item.link.indexOf('http') === 0)"
           :aria-label="item.label"
           :class="bem('link')"
-          :href="item.link">
+          :href="item.link ? item.link : '#'">
           <font-awesome-icon
             v-if="item.icon && !item.drawerIconOnly"
             :icon="item.icon"
             :class="bem('icon')"/> {{ item.onlyIcon ? '' : item.label }}
         </a>
         <nuxt-link
-          v-else
+          v-else-if="item.link"
           :aria-label="item.label"
           :class="bem('link')"
           :to="item.link"

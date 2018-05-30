@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/BobbyMBailey/sammasonmusic.svg?style=svg)](https://circleci.com/gh/BobbyMBailey/sammasonmusic)
+[![CircleCI](https://circleci.com/gh/BobbyMBailey/sammasonmusic.svg?style=svg)](https://circleci.com/gh/BobbyMBailey/sammasonmusic) [![codecov](https://codecov.io/gh/BobbyMBailey/sammasonmusic/branch/master/graph/badge.svg)](https://codecov.io/gh/BobbyMBailey/sammasonmusic)
 
 # Sam Mason Music
 Source Code for [www.sammasonmusic.com](www.sammasonmusic.com)
