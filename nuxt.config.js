@@ -69,9 +69,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    /*
-    ** Run ESLint on save
-    */
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         // https://github.com/vuejs/vue/tree/dev/dist

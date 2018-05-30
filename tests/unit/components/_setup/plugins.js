@@ -1,4 +1,5 @@
 import VueBemCn from 'vue-bem-cn'
+import 'webcomponents.js/MutationObserver'
 
 const setupVueBEM = vue => {
   vue.use(VueBemCn, {
@@ -11,5 +12,6 @@ const setupVueBEM = vue => {
 }
 
 export default function (vue) {
+  Object.defineProperty(global, 'MutationObserver', {value: window.MutationObserver})
   setupVueBEM(vue)
 }

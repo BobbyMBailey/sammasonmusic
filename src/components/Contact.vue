@@ -37,7 +37,7 @@ export default {
   mixins: [BEMModifiers],
   data () {
     return {
-      socialItems: this.$store.state.socialLinks
+      socialItems: this.$store.state.socialLinks || []
     }
   }
 }
