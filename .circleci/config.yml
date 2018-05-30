@@ -29,6 +29,8 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
   test:
+      working_directory: ~/repo
+
       docker:
         - image: circleci/node:8.10
       steps:
