@@ -334,14 +334,14 @@
   version "3.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-3.0.0-beta.6.tgz#bc11b99e8b6550b43326305ee11f27d07ceaeec0"
 
-"@vue/cli-plugin-e2e-cypress@^3.0.0-beta.6":
+"@vue/cli-plugin-e2e-cypress@3.0.0-beta.6":
   version "3.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-e2e-cypress/-/cli-plugin-e2e-cypress-3.0.0-beta.6.tgz#476dfd95f0a6594fd4f67a6258d46d03a558ecb8"
   dependencies:
     cypress "^2.1.0"
     eslint-plugin-cypress "^2.0.1"
 
-"@vue/cli-plugin-unit-mocha@^3.0.0-beta.6":
+"@vue/cli-plugin-unit-mocha@3.0.0-beta.6":
   version "3.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-unit-mocha/-/cli-plugin-unit-mocha-3.0.0-beta.6.tgz#12d0b2d31864faa880e0bc820b8fce35cedeab51"
   dependencies:
@@ -352,7 +352,7 @@
     mocha-webpack "^1.0.1"
     webpack-node-externals "^1.6.0"
 
-"@vue/cli-service@^3.0.0-beta.6":
+"@vue/cli-service@3.0.0-beta.6":
   version "3.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-3.0.0-beta.6.tgz#b229b5fd3c5db33f0df9824f0b99ca081fa38d20"
   dependencies:
@@ -412,7 +412,7 @@
     ora "^1.3.0"
     string.prototype.padstart "^3.0.0"
 
-"@vue/eslint-config-standard@^3.0.0-beta.6":
+"@vue/eslint-config-standard@3.0.0-beta.6":
   version "3.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/@vue/eslint-config-standard/-/eslint-config-standard-3.0.0-beta.6.tgz#fe3b43dd12249fbf4e4352759848197093fdcc92"
   dependencies:
@@ -422,7 +422,7 @@
     eslint-plugin-promise "^3.6.0"
     eslint-plugin-standard "^3.0.1"
 
-"@vue/test-utils@^1.0.0-beta.13":
+"@vue/test-utils@1.0.0-beta.13":
   version "1.0.0-beta.13"
   resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-1.0.0-beta.13.tgz#309dc50d2a55ac9facf781f62bbd236475ba5033"
   dependencies:
@@ -980,13 +980,6 @@ autoprefixer@^8.1.0:
     num2fraction "^1.2.2"
     postcss "^6.0.20"
     postcss-value-parser "^3.2.3"
-
-avoriaz@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/avoriaz/-/avoriaz-6.3.0.tgz#ede148cf0be06f792ff8253a68e0e0483b27c2de"
-  dependencies:
-    lodash "^4.17.4"
-    vue-add-globals "^2.0.0"
 
 aws-sign2@~0.6.0:
   version "0.6.0"
@@ -12570,10 +12563,6 @@ vm-browserify@0.0.4:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-0.0.4.tgz#5d7ea45bbef9e4a6ff65f95438e0a87c357d5a73"
   dependencies:
     indexof "0.0.1"
-
-vue-add-globals@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/vue-add-globals/-/vue-add-globals-2.0.1.tgz#c9fba6faac44f679ec15d5a9637f518b181fc44d"
 
 vue-analytics@^5.4.0:
   version "5.10.2"

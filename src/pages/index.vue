@@ -6,7 +6,7 @@
       id="hero"
       :content-modifiers="['center', 'set-height', 'column', 'column-top']"
       class="mason-hero"
-      background-image="/images/4577_full_focus_dark.jpg">
+      background-image="/images/4577_full_focus_dark_14.jpg">
       <p
         aria-hidden="true"
         class="mason-hero__item--mobile-only">Enter Email for Free Music and Updates</p>
@@ -86,7 +86,7 @@ export default {
   }
 
   .mason-footer {
-    background-image: url('/images/4577_footer.jpg') !important;
+    background-image: url('/images/4577_footer_16.jpg') !important;
   }
 </style>
 <style lang="scss" src="../assets/Hero.scss"/>

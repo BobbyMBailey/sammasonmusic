@@ -41,6 +41,13 @@ import MasonSection from '~/components/Section.vue'
 
 export default {
   name: 'Photos',
+  head () {
+    return {
+      meta: [
+        { hid: 'description', name: 'description', content: 'Photos of Sam Mason' }
+      ]
+    }
+  },
   components: {
     MasonCard,
     MasonHeader,
@@ -50,6 +57,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-  @import 'assets/Grid';
-</style>
+<style lang="scss" src="../assets/Grid.scss"/>

@@ -26,6 +26,13 @@ import Signup from '~/components/Signup.vue'
 
 export default {
   name: 'Contact',
+  head () {
+    return {
+      meta: [
+        { hid: 'description', name: 'description', content: 'Booking Sam Mason and other inquiries including Social Media outlets' }
+      ]
+    }
+  },
   components: {
     MasonContact,
     MasonHeader,

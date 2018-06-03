@@ -53,5 +53,25 @@ describe('Signup', () => {
     })
   })
 
-  describe.skip('Properties', () => {})
+  describe('Methods', () => {
+    it('onEmailChange sets email property', () => {
+      const wrapper = shallow(ComponentUnderTest, {
+        localVue
+      })
+      wrapper.vm.onEmailChange('newemail@example.com')
+      expect(wrapper.vm.email).to.equal('newemail@example.com')
+    })
+  })
+
+  describe('Events', () => {
+    describe('submitted - ', () => {
+      it('when invoking onSubmit', () => {
+        const wrapper = shallow(ComponentUnderTest, {
+          localVue
+        })
+        wrapper.vm.onSubmit()
+        expect(wrapper.emitted('submitted')).to.have.lengthOf(1)
+      })
+    })
+  })
 })

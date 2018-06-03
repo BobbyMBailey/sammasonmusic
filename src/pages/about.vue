@@ -42,6 +42,13 @@ import MasonSection from '~/components/Section.vue'
 
 export default {
   name: 'About',
+  head () {
+    return {
+      meta: [
+        { hid: 'description', name: 'description', content: 'Sam Mason is a singer/song writer with a strong radio presence in Dallas/Fort Worth Texas' }
+      ]
+    }
+  },
   components: {
     MasonCard,
     MasonHeader,
