@@ -61,5 +61,47 @@ describe('Drawer', () => {
     })
   })
 
-  describe.skip('Properties', () => {})
+  describe('Properties', () => {
+    it('model property setting sets the value and emits event', () => {
+      let store = new Vuex.Store({
+        state: {}
+      })
+      const wrapper = shallow(ComponentUnderTest, {
+        localVue,
+        store,
+        router: setupRouter(localVue),
+        stubs: stubs
+      })
+
+      expect(wrapper.vm.model).to.equal(false)
+      wrapper.vm.model = true
+      expect(wrapper.emitted('change')).to.be.a('array')
+      expect(wrapper.emitted('change')[0][0]).to.equal(true)
+      // Changing of "open" is handled by events
+      expect(wrapper.vm.model).to.equal(false)
+    })
+
+    describe('open', () => {
+      it('defaults to false', () => {
+        const wrapper = shallow(ComponentUnderTest, {
+          localVue,
+          store: new Vuex.Store({state: {}}),
+          router: setupRouter(localVue),
+          stubs: stubs
+        })
+        expect(wrapper.vm.open).to.equal(false)
+      })
+      it('setting to true changes MDC component state', () => {
+        const wrapper = shallow(ComponentUnderTest, {
+          localVue,
+          store: new Vuex.Store({state: {}}),
+          router: setupRouter(localVue),
+          stubs: stubs
+        })
+        expect(wrapper.vm.mdcTemporaryDrawer.open).to.equal(false)
+        wrapper.vm.open = true
+        expect(wrapper.vm.mdcTemporaryDrawer.open).to.equal(true)
+      })
+    })
+  })
 })

@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     onSubmit () {
-      console.log(this.email)
+      this.$emit('submitted', {email: this.$data.email})
     },
     onEmailChange (value) {
       this.$data.email = value

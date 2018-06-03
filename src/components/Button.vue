@@ -1,12 +1,13 @@
 <template>
   <button
     :class="bem()"
-    :type="type"
+    :type="buttonType"
     @click="onClick">{{ label }}
   </button>
 </template>
 
 <script>
+const allowedTypes = ['button', 'submit', 'reset']
 export default {
   name: 'Button',
   props: {
@@ -22,10 +23,15 @@ export default {
      */
     type: {
       type: String,
-      default: null,
+      default: 'button',
       validator: function (value) {
-        return ['button', 'submit', 'reset', null].indexOf(value) !== -1
+        return allowedTypes.indexOf(value) !== -1
       }
+    }
+  },
+  computed: {
+    buttonType () {
+      return allowedTypes.indexOf(this.type) !== -1 ? this.type : this.$options.props.type.default
     }
   },
   methods: {
