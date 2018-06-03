@@ -25,11 +25,11 @@ $block-name: $namespace + '-card';
   }
 
   &--medium {
-    width: 50%;
+    width: calc(50% - 4em);
   }
 
   &--small {
-    width: 33%;
+    width: calc(33% - 4em);
   }
 
   &__media {
