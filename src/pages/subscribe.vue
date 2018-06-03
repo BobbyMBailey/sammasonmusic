@@ -26,6 +26,13 @@ import Signup from '~/components/Signup.vue'
 
 export default {
   name: 'Subscribe',
+  head () {
+    return {
+      meta: [
+        { hid: 'description', name: 'description', content: 'To stay in-touch with Sam Mason and his music, provide your email address' }
+      ]
+    }
+  },
   components: {
     MasonContact,
     MasonHeader,

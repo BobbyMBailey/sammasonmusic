@@ -64,6 +64,13 @@ import MasonSection from '~/components/Section.vue'
 
 export default {
   name: 'Press',
+  head () {
+    return {
+      meta: [
+        { hid: 'description', name: 'description', content: 'Discover what critiques and fans say about Sam Mason and his music' }
+      ]
+    }
+  },
   components: {
     MasonCard,
     MasonHeader,

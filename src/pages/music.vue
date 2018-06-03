@@ -31,6 +31,13 @@ import MasonSection from '~/components/Section.vue'
 
 export default {
   name: 'Music',
+  head () {
+    return {
+      meta: [
+        { hid: 'description', name: 'description', content: 'Listen to Sam Mason\'s music on Spotify and SoundCloud' }
+      ]
+    }
+  },
   components: {
     MasonCard,
     MasonHeader,

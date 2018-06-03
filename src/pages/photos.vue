@@ -41,6 +41,13 @@ import MasonSection from '~/components/Section.vue'
 
 export default {
   name: 'Photos',
+  head () {
+    return {
+      meta: [
+        { hid: 'description', name: 'description', content: 'Photos of Sam Mason' }
+      ]
+    }
+  },
   components: {
     MasonCard,
     MasonHeader,
