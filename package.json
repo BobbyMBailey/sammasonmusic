@@ -10,7 +10,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate && yarn styleguide:build",
+    "generate": "NODE_ENV=production nuxt generate && NODE_ENV=production yarn styleguide:build",
     "styleguide": "vue-styleguidist server",
     "styleguide:build": "vue-styleguidist build",
     "test": "yarn lint && yarn build && yarn test:coverage",
