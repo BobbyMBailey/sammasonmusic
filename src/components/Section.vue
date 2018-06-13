@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped src="../assets/Section.scss" />
+<style lang="scss" src="../assets/Section.scss" />
 
 <docs>
   ```jsx

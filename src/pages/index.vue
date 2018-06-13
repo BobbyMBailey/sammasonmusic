@@ -54,6 +54,7 @@ export default {
 }
 </script>
 
+<style lang="scss" src="../assets/Hero.scss"/>
 <style lang="scss" scoped>
   @import 'assets/theme/colors';
 
@@ -89,4 +90,3 @@ export default {
     background-image: url('/images/4577_footer_16.jpg') !important;
   }
 </style>
-<style lang="scss" src="../assets/Hero.scss"/>
